@@ -11,7 +11,7 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = (dispatch, ownProps) => {
     return ({
-        processForm: user => dispatch(signup(user))
+        processForm: formUser => dispatch(signup(formUser))
     })
 }
 

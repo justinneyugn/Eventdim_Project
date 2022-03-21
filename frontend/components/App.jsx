@@ -7,8 +7,8 @@ const App = () => (
     <div>
         <h1>Eventdim</h1>
 
-        <Route path="/api/sesssion" component={LoginFormContainer} />
-        <Route path="/api/users" component={SignupFormContainer} />
+        <Route path="/login" component={LoginFormContainer} />
+        <Route path="/signup" component={SignupFormContainer} />
     </div>
 );
 
