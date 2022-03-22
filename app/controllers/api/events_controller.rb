@@ -1,7 +1,7 @@
 class Api::EventsController < ApplicationController
     def new 
         @event = Event.new
-        render :new
+        render "api/events/new"
     end
 
     def create
@@ -58,6 +58,6 @@ class Api::EventsController < ApplicationController
     private
 
     def event_params
-        params.require(:event).permit(:title, :details, :date, :creator_id)
+        params.require(:event).permit(:title, :details, :creator_id, :date, :location, :ticket_price)
     end
 end
