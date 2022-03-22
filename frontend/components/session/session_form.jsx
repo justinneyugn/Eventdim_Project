@@ -31,23 +31,23 @@ class SessionForm extends React.Component {
     }
 
     link() {
-        if (this.props.formType === 'signup') {
+        if (this.props.formType === 'Create an account') {
             return (
-                <Link to='/login'>Log In</Link>
+                <Link to='/signin'>Log In</Link>
             )
         } else {
             return (
-                <Link to='/signup'>Sign Up</Link>
+                <Link to='/signup'>Sign up for Eventdim</Link>
             )
         }
     }
 
     
     errors(){
-        if (this.props.errors) {
+        if (this.state.errors) {
             return (
                 <ul>
-                    {this.props.errors.map( error => {
+                    {this.state.errors.map( error => {
                         return (
                             <li>{error}</li>
                         )
@@ -62,7 +62,7 @@ class SessionForm extends React.Component {
             <div>
                 <h1>{this.props.formType}</h1>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Email</label>
+                    <label>Email address</label>
                     <input 
                         type="text"
                         onChange={this.updateEmail}
@@ -75,10 +75,12 @@ class SessionForm extends React.Component {
                         onChange={this.updatePassword}
                         value={this.state.password}
                     />
+                    <br />
                     <button type="submit">{this.props.formType}</button>
                 </form>
-                {/* {this.link} */}
-                {/* {this.errors} */}
+                <p>or</p>
+                {this.link()}
+                {this.errors()}
             </div>
         )
     }

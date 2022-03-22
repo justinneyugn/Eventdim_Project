@@ -5,9 +5,9 @@ import SignupFormContainer from "./session/signup_form_container";
 
 const App = () => (
     <div>
-        <h1>Eventdim</h1>
+        <h1>eventdim</h1>
 
-        <Route path="/login" component={LoginFormContainer} />
+        <Route path="/signin" component={LoginFormContainer} />
         <Route path="/signup" component={SignupFormContainer} />
     </div>
 );

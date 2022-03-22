@@ -5,7 +5,7 @@ import { signup } from "../../actions/session_actions";
 const mSTP = (state, ownProps) => {
     return ({
         errors: state.errors.session,
-        formType: 'signup'
+        formType: 'Create an account'
     })
 }
 
