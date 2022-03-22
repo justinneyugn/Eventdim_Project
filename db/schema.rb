@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_22_211726) do
+ActiveRecord::Schema.define(version: 2022_03_22_222256) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 2022_03_22_211726) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "creator_id", null: false
-    t.date "date", null: false
     t.string "location", null: false
     t.float "ticket_price", null: false
     t.index ["creator_id"], name: "index_events_on_creator_id"
