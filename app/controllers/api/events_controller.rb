@@ -49,7 +49,7 @@ class Api::EventsController < ApplicationController
     def destroy
         @event = Event.find(params[:id])
         if @event.destroy
-            redirect_to chirps_url
+            redirect_to events_url
         else 
             render plain: "You can't destroy what's not there."
         end
