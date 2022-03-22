@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+Event.destroy_all
 
 user1 = User.create(email: Faker::Internet.email, password: 'password')
 user2 = User.create(email: Faker::Internet.email, password: 'password')
@@ -17,3 +18,8 @@ user6 = User.create(email: Faker::Internet.email, password: 'password')
 user7 = User.create(email: Faker::Internet.email, password: 'password')
 user8 = User.create(email: Faker::Internet.email, password: 'password')
 user9 = User.create(email: Faker::Internet.email, password: 'password')
+
+event1 = Event.create(title: "Loud Festival",
+    details: "Loud Festival is a three-day event, held at Cesar Chavez Park. This inaugural year, the festival will be headlined by one of the most famous rappers in the game, Rick Ross. This was no small feat for a new, relatively small music festival",
+    date: Date.new(2022, 4, 24),
+    creator_id: user1.id)
