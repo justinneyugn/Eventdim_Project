@@ -11,8 +11,6 @@ const EventsReducer = (state = {}, action) => {
         case RECEIVE_EVENTS:
             return action.events;
         case RECEIVE_EVENT:
-            // newState[action.event.id] = action.event;
-            // return newState;
             return Object.assign({}, state, { [action.event.id]: action.event })
         case REMOVE_EVENT:
             delete newState[action.eventId];

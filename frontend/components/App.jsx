@@ -14,6 +14,7 @@ const App = () => (
     <div>
         <h1><a href="https://eventdim.herokuapp.com/#/" className='website-name'>eventdim</a></h1>
         {/* <Switch> */}
+            {/* these are only seen if you are logged in */}
             <ProtectedRoute exact path="/new" component={CreateEventFormContainer} />
             <ProtectedRoute exact path="/events/:eventId/edit" component={EditEventFormContainer} />
             <ProtectedRoute path="/events/:eventId" component={EventShowContainer} />
@@ -21,6 +22,7 @@ const App = () => (
             {/* these are only seen if you are logged out */}
             <AuthRoute path="/signin" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />
+
             <Route exact path="/" component={NavBarContainer} />
             <Route exact path="/" component={EventIndexContainer} />
         {/* </Switch> */}

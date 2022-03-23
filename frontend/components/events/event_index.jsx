@@ -26,7 +26,6 @@ class EventIndex extends React.Component {
                 <ul>
                     {events}
                 </ul>
-                <Link to='/new'>New Event</Link>
             </div>
         )
     }

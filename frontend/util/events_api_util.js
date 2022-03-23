@@ -12,7 +12,7 @@ export const fetchEvent = (eventId) => {
     })
 };
 
-export const createEvent = (event) => {
+export const createEvent = (event) =>{ 
     return $.ajax({
         method: `POST`,
         url: `/api/events`,

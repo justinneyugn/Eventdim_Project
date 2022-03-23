@@ -21,7 +21,7 @@ class EventForm extends React.Component {
     }
 
     render() {
-        debugger
+        
         if (!this.props.event) return null;
         return (
             <div>

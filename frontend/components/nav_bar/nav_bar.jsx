@@ -9,16 +9,15 @@ export default ({ currentUser, logout }) => {
         </div>
     ) : (
         <div>
-            <Link className="btn" to="/signin">Log In</Link>
-            <br />
-            <Link className="btn" to="/signup">Sign Up</Link>
+            <Link className="btn" to="/signin">Sign In</Link>
         </div>
     );
 
     return (
     <header className="nav-bar">
         <div>
-        {display}
+            <Link to='/new'>Create an event</Link>
+            {display}
         </div>
     </header>
     );
