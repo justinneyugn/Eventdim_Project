@@ -14,4 +14,9 @@
  *= require_self
  */
 
- 
+.website-name{
+    font-family: sans-serif;
+    /* font-style: italic; */
+    color: #ff5f1f;
+    text-decoration: none;
+}
