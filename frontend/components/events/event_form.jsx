@@ -31,25 +31,29 @@ class EventForm extends React.Component {
                         onChange={this.update('title')}
                         value={this.state.title}
                     />
+                    <br />
                     <label>Details</label>
                     <textarea
                         type="text"
                         value={this.state.details}
                         onChange={this.update('details')}
                     />
+                    <br />
                     <label>Location</label>
                     <input
                         type="text"
                         onChange={this.update('location')}
                         value={this.state.location}
                     />
+                    <br />
                     <label>Ticket Price</label>
                     <input
                         type="number"
                         onChange={this.update('ticket_price')}
                         value={this.state.ticket_price}
                     />
-                    <button type='submit' value={this.props.formType}/>
+                    <br />
+                    <button type='submit'>{this.props.formType}</button>
                 </form>
             </div>
         )

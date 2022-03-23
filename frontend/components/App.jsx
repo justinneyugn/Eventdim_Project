@@ -14,9 +14,9 @@ const App = () => (
     <div>
         <h1 id='website-name'>eventdim</h1>
         {/* <Switch> */}
-            <Route exact path="/events/new" component={CreateEventFormContainer} />
-            <Route exact path="/events/:eventId" component={EventShowContainer} />
-            <Route exact path="/events/:eventId/edit" component={EditEventFormContainer} />
+            <ProtectedRoute exact path="/events/new" component={CreateEventFormContainer} />
+            {/* <ProtectedRoute exact path="/events/:eventId" component={EventShowContainer} /> */}
+            <ProtectedRoute exact path="/events/:eventId/edit" component={EditEventFormContainer} />
 
             {/* these are only seen if you are logged out */}
             <AuthRoute path="/signin" component={LoginFormContainer} />
