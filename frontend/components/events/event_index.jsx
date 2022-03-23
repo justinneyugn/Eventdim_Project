@@ -12,11 +12,12 @@ class EventIndex extends React.Component {
     }
 
     render(){
-        let events = this.props.events.map( event => {
+        let events = this.props.events.map( (event, idx) => {
             return (
                 <EventIndexItem
                     event={event}
                     deleteEvent={this.props.deleteEvent}
+                    key={`event-${idx}`}
                 />
             )
         })
