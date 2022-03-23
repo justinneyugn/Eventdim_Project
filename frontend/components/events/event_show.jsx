@@ -11,6 +11,7 @@ class EventShow extends React.Component {
     }
 
     render() {
+        if (!this.props.event) return null;
         return (
             <div>
                 <h1>{this.props.event.title}</h1>

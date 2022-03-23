@@ -12,11 +12,11 @@ import CreateEventFormContainer from './events/create_event_form_container';
 
 const App = () => (
     <div>
-        <h1><a href="https://eventdim.herokuapp.com/#/" class='website-name'>eventdim</a></h1>
+        <h1><a href="https://eventdim.herokuapp.com/#/" className='website-name'>eventdim</a></h1>
         {/* <Switch> */}
-            <ProtectedRoute exact path="/events/new" component={CreateEventFormContainer} />
-            <ProtectedRoute exact path="/events/:eventId" component={EventShowContainer} />
+            <ProtectedRoute exact path="/new" component={CreateEventFormContainer} />
             <ProtectedRoute exact path="/events/:eventId/edit" component={EditEventFormContainer} />
+            <ProtectedRoute path="/events/:eventId" component={EventShowContainer} />
 
             {/* these are only seen if you are logged out */}
             <AuthRoute path="/signin" component={LoginFormContainer} />
