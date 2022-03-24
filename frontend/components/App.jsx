@@ -12,12 +12,11 @@ import CreateEventFormContainer from './events/create_event_form_container';
 
 const App = () => (
     <div>
-        <h1><a href="http://localhost:3000/#/" className='website-name'>eventdim</a></h1>
         {/* <Switch> */}
             {/* these are only seen if you are logged in */}
             <ProtectedRoute exact path="/new" component={CreateEventFormContainer} />
             <ProtectedRoute exact path="/events/:eventId/edit" component={EditEventFormContainer} />
-            <ProtectedRoute path="/events/:eventId" component={EventShowContainer} />
+            <Route path="/events/:eventId" component={EventShowContainer} />
 
             {/* these are only seen if you are logged out */}
             <AuthRoute path="/signin" component={LoginFormContainer} />

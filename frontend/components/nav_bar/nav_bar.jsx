@@ -15,10 +15,13 @@ export default ({ currentUser, logout }) => {
 
     return (
     <header className="nav-bar">
-        <div>
-            <Link to='/new'>Create an event</Link>
-            {display}
-        </div>
+        <a href="http://localhost:3000/#/" className='website_name'>eventdim</a>
+        <nav>
+            <ul className="nav_links">
+                <li><Link className="btn create" to='/new'>Create an event</Link></li>
+                <li>{display}</li>
+            </ul>
+        </nav>
     </header>
     );
 };

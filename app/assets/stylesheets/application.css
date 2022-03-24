@@ -14,9 +14,52 @@
  *= require_self
  */
 
-.website-name{
+.website_name {
     font-family: sans-serif;
     /* font-style: italic; */
     color: #ff5f1f;
     text-decoration: none;
+    margin-right: auto;
+    font-size: 25px;
+    font-weight: 700;
 }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.btn {
+    color: #39364f;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    height: 72px;
+    padding: 0 12px;
+    background-color: transparent;
+    letter-spacing: normal;
+    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+}
+
+.create {
+    color: #3D64FF;
+}
+
