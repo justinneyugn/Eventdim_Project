@@ -40,7 +40,8 @@ class Api::EventsController < ApplicationController
     def update 
         @event = Event.find(params[:id])
         if @event.update(event_params)
-            redirect_to api_event_url(@event)
+            # redirect_to api_event_url(@event)
+            render "api/events/show"
         else
             render json: @event.errors.full_messages, status: 422
         end
@@ -50,7 +51,7 @@ class Api::EventsController < ApplicationController
         @event = Event.find(params[:id])
         if @event.destroy
             # redirect_to api_events_url
-            render plain: "Destroyed"
+            render "api/events/show"
         else 
             render plain: "You can't destroy what's not there."
         end

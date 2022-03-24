@@ -14,7 +14,7 @@ class EventShow extends React.Component {
         if (!this.props.event) return null;
         return (
             <div>
-                <a href="http://localhost:3000/#/" className='website_name'>eventdim</a>
+                <Link to='/' className='website_name'>eventdim</Link>
                 <h1>{this.props.event.title}</h1>
                 <h2>{this.props.event.location}</h2>
                 <h3>${this.props.event.ticket_price}</h3>

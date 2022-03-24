@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { requestEvent, updateEvent } from '../../actions/event_actions';
 import EventForm from './event_form';
+// import {withRouter} from 'react-router-dom'
 
 class EditEventForm extends React.Component {
 
@@ -10,14 +11,15 @@ class EditEventForm extends React.Component {
     }
     
     render () {
-        const { event, formType, submitEvent } = this.props;
+        const { event, formType, submitEvent, history } = this.props;
 
         if (!event) return null;
         return (
             <EventForm
                 event={event}
                 formType={formType}
-                submitEvent={submitEvent} />
+                submitEvent={submitEvent}
+                history={history} />
         );
     }
 }
@@ -36,4 +38,4 @@ const mDTP = dispatch => {
     });
 };
 
-export default connect(mSTP, mDTP)(EditEventForm)
+export default connect(mSTP, mDTP)(EditEventForm);

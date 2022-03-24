@@ -18,6 +18,8 @@ class EventIndex extends React.Component {
                     event={event}
                     deleteEvent={this.props.deleteEvent}
                     currentUser={this.props.currentUser}
+                    requestEvent={this.props.requestEvent}
+                    history={this.props.history}
                     key={`event-${idx}`}
                 />
             )

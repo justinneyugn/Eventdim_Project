@@ -7,8 +7,6 @@ class EventForm extends React.Component {
         this.state = this.props.event;
         this.update = this.update.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.reroute = this.reroute.bind(this);
-
     }
 
     update(field) {
@@ -19,21 +17,14 @@ class EventForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        const newEvent = Object.assign({}, this.state);
-        this.props.submitEvent(newEvent);
-    }
-
-    reroute() {
-        if (this.props.formType === 'Create an event') {
-            console.log("inside reroute")
-            return (
-                <Link to="/" />
-            )
-        } else {
-            return (
-                <Link to={`/events/${this.state.id}}`} />
-            )
-        }
+        this.props.submitEvent(this.state).then( response => {
+            if (this.props.formType === 'Create an event') {
+                this.props.history.push(`/`);
+            } 
+            else {
+                this.props.history.push(`/events/${this.state.id}`)
+            };
+        })
     }
 
     render() {
@@ -41,7 +32,7 @@ class EventForm extends React.Component {
         if (!this.props.event) return null;
         return (
             <div>
-                <h1><a href="http://localhost:3000/#/" className='website_name'>eventdim</a></h1>
+                <Link to='/' className='website_name'>eventdim</Link>
                 <h1>{this.props.formType}</h1>
                 <form onSubmit={this.handleSubmit}>
                     <label>Title</label>

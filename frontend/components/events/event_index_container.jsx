@@ -1,6 +1,6 @@
-import { connect } from 'react-redux';
+import { connect, withRouter } from 'react-redux';
 import EventIndex from './event_index';
-import { requestEvents, deleteEvent } from '../../actions/event_actions';
+import { requestEvents, deleteEvent, requestEvent } from '../../actions/event_actions';
 
 const mSTP = state => {
     return ({
@@ -12,7 +12,8 @@ const mSTP = state => {
 const mDTP = dispatch => {
     return ({
         requestEvents: () => dispatch(requestEvents()),
-        deleteEvent: eventId => dispatch(deleteEvent(eventId))
+        deleteEvent: eventId => dispatch(deleteEvent(eventId)),
+        requestEvent: eventId => dispatch(requestEvent(eventId))
     });
 };
 

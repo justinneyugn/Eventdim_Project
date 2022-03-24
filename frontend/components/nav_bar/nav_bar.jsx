@@ -15,7 +15,7 @@ export default ({ currentUser, logout }) => {
 
     return (
     <header className="nav-bar">
-        <a href="http://localhost:3000/#/" className='website_name'>eventdim</a>
+        <Link to='/' className='website_name'>eventdim</Link>
         <nav>
             <ul className="nav_links">
                 <li><Link className="btn create" to='/new'>Create an event</Link></li>
