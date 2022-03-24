@@ -1,9 +1,14 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 class EventIndexItem extends React.Component {
     constructor(props){
         super(props);
+        this.afterDelete = this.afterDelete.bind(this);
+    }
+
+    afterDelete() {
+        this.props.deleteEvent(this.props.event.id);
     }
 
     render(){
@@ -13,7 +18,11 @@ class EventIndexItem extends React.Component {
                     <div>
                         <Link to={`/events/${this.props.event.id}/edit`}>Edit</Link>
                         <br />
-                        <button onClick={() => this.props.deleteEvent(this.props.event.id)}>Delete</button>
+                        <button onClick={() => this.props.deleteEvent(this.props.event.id)}>
+                            <Link to="/">
+                                Delete
+                            </Link>
+                        </button>
                     </div>
                 )
             }

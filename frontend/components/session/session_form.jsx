@@ -68,6 +68,7 @@ class SessionForm extends React.Component {
     render() {
         return (
             <div>
+                <h1><a href="http://localhost:3000/#/" className='website_name'>eventdim</a></h1>
                 <h1>{this.props.formType}</h1>
                 <form onSubmit={this.handleSubmit}>
                     <label>Email address</label>

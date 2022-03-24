@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, Redirect } from 'react-router-dom';
 
 class EventForm extends React.Component {
     constructor(props){
@@ -6,6 +7,7 @@ class EventForm extends React.Component {
         this.state = this.props.event;
         this.update = this.update.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.reroute = this.reroute.bind(this);
 
     }
 
@@ -17,7 +19,21 @@ class EventForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        this.props.submitEvent(this.state);
+        const newEvent = Object.assign({}, this.state);
+        this.props.submitEvent(newEvent);
+    }
+
+    reroute() {
+        if (this.props.formType === 'Create an event') {
+            console.log("inside reroute")
+            return (
+                <Link to="/" />
+            )
+        } else {
+            return (
+                <Link to={`/events/${this.state.id}}`} />
+            )
+        }
     }
 
     render() {
@@ -25,6 +41,7 @@ class EventForm extends React.Component {
         if (!this.props.event) return null;
         return (
             <div>
+                <h1><a href="http://localhost:3000/#/" className='website_name'>eventdim</a></h1>
                 <h1>{this.props.formType}</h1>
                 <form onSubmit={this.handleSubmit}>
                     <label>Title</label>
@@ -57,6 +74,7 @@ class EventForm extends React.Component {
                     <br />
                     <button type='submit'>{this.props.formType}</button>
                 </form>
+
             </div>
         )
     }
