@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import React from "react";
 import SessionForm from "./session_form";
-import { login } from "../../actions/session_actions";
+import { login, removeErrors } from "../../actions/session_actions";
 
 const mSTP = ({ errors }) => {
     return ({
@@ -12,7 +12,8 @@ const mSTP = ({ errors }) => {
 
 const mDTP = (dispatch, ownProps) => {
     return ({
-        processForm: user => dispatch(login(user))
+        processForm: user => dispatch(login(user)),
+        removeErrors: () => dispatch(removeErrors())
     })
 }
 

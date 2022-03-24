@@ -7,13 +7,22 @@ class EventIndexItem extends React.Component {
     }
 
     render(){
+        const editDelete = () => {
+            if (this.props.currentUser) {
+                return (
+                    <div>
+                        <Link to={`/events/${this.props.event.id}/edit`}>Edit</Link>
+                        <br />
+                        <button onClick={() => this.props.deleteEvent(this.props.event.id)}>Delete</button>
+                    </div>
+                )
+            }
+        }
         return (
             <li>
                 <Link to={`/events/${this.props.event.id}`}>{this.props.event.title}</Link>
                 <br/>
-                <Link to={`/events/${this.props.event.id}/edit`}>Edit</Link>
-                <br />
-                <button onClick={() => this.props.deleteEvent(this.props.event.id)}>Delete</button>
+                {editDelete()}
             </li>
         )
     }

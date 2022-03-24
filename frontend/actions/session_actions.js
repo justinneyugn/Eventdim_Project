@@ -21,7 +21,7 @@ const receiveErrors = errors => ({
     errors
 })
 
-const removeErrors = () => ({
+export const removeErrors = () => ({
     type: REMOVE_SESSION_ERRORS
 })
 

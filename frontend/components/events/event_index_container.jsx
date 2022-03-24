@@ -4,7 +4,8 @@ import { requestEvents, deleteEvent } from '../../actions/event_actions';
 
 const mSTP = state => {
     return ({
-        events: Object.values(state.entities.events)
+        events: Object.values(state.entities.events),
+        currentUser: state.session.currentUser
     });
 };
 
