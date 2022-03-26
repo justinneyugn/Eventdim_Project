@@ -2,3 +2,93 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.session-container {
+    display: flex;
+    flex-direction: column;
+    width: 715px;
+    height: 750px;
+    align-items: center;
+    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+}
+
+.session-container h1, div, form, p, a {
+    border: 1px #ccc solid;
+}
+
+.session-logo a{
+    flex: 2;
+    width: 800px;
+    height: 600px;
+    color: #ff5f1f
+}
+
+.session-type {
+    flex: 3;
+    width: 200px;
+    height: 200px;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    font-size: 42px;
+    font-weight: 800;
+}
+
+.session-errors {
+    flex: 1;
+}
+
+.session-form {
+    width: 350px;
+    height: 200px;
+}
+.session-email {
+    flex: 1;
+}
+
+.session-password {
+    flex: 1;
+}
+
+.session-button {
+    flex: 1;
+    background-color: #D1410C;
+    color: #FFFFFF;
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 14px 28px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    transition: all .4s cubic-bezier(.4,0,.3,1);
+}
+
+.session-button:hover{
+    background-color: #FA5F55;
+}
+
+.session-or {
+    flex: 1;
+}
+
+.session-link {
+    flex: 1;
+    height: 300px;
+    width: 500px;
+}
+
+.session-link:hover {
+    text-decoration: underline;
+}
+
+
+.session-other-links {
+    flex: 1;
+}
+
+
+.link {
+    color: #3659E3;
+    text-decoration: none;
+    font-size: 14px;
+}
