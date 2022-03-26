@@ -19,14 +19,14 @@ event1 = Event.create(title: "Loud Festival",
     location: "Cesar Chavez Plaza",
     ticket_price: 65.00)
 
-event2 = Event.create(title: "Sacramento Grilled Cheese Festival 2022",
-    details: "The Sacramento Grilled Cheese Festival is a full weekend of events dedicated to the one food you never out grow.... GRILLED CHEESE! We've paired our grilled cheese with everything from craft beer to bounce houses so we've got something for everyone.",
-    creator_id: user3.id,
-    location: "Southside Park",
-    ticket_price: 8.00)
+# event2 = Event.create(title: "Sacramento Grilled Cheese Festival 2022",
+#     details: "The Sacramento Grilled Cheese Festival is a full weekend of events dedicated to the one food you never out grow.... GRILLED CHEESE! We've paired our grilled cheese with everything from craft beer to bounce houses so we've got something for everyone.",
+#     creator_id: user3.id,
+#     location: "Southside Park",
+#     ticket_price: 8.00)
 
-event3 = Event.create(title: "Muddy Princess Sacramento, CA",
-    details: "Our event is for Princesses of all sizes, ages and fitness levels. We don’t focus on fastest times or competitions, we focus on fun so be prepared to run, walk, crawl, climb, slide, balance and laugh your way along our course for an amazing “girls dirty day out!”",
-    creator_id: user1.id,
-    location: "Murieta Equestrian Center",
-    ticket_price: 49.00)
+# event3 = Event.create(title: "Muddy Princess Sacramento, CA",
+#     details: "Our event is for Princesses of all sizes, ages and fitness levels. We don’t focus on fastest times or competitions, we focus on fun so be prepared to run, walk, crawl, climb, slide, balance and laugh your way along our course for an amazing “girls dirty day out!”",
+#     creator_id: user1.id,
+#     location: "Murieta Equestrian Center",
+#     ticket_price: 49.00)
