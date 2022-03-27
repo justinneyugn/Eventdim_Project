@@ -19,13 +19,6 @@
     align-items: center;
 }
 
-// .session-container,
-// .session-container h1, 
-// .session-container div, 
-// .session-container form {
-//     border: 1px #ccc solid;
-// }
-
 .session-logo {
     flex: 1;
     padding-top: 90px;
@@ -140,7 +133,6 @@ ul {
     display: inline-block;
 }
 .session-or-container {
-    // flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -160,11 +152,6 @@ ul {
 
 .session-link:hover {
     text-decoration: underline;
-}
-
-
-.session-other-links {
-    flex: 1;
 }
 
 

@@ -44,24 +44,12 @@ class SessionForm extends React.Component {
         if (this.props.formType === 'Create an account') {
             return (
                 <div>
-                    {/* <Link to='/signup' className="session-other-links link">Sign up with Google</Link>
-                    <br />
-                    <Link to='/signup' className="session-other-links link">Sign up with Facebook</Link>
-                    <br />
-                    <Link to='/signup' className="session-other-links link">Sign up with Apple</Link>
-                    <br /> */}
                     <Link className="session-link link" to='/signin'>Log In</Link>
                 </div>
             )
         } else {
             return (
                 <div>
-                    {/* <Link to='/signin' className="session-other-links link">Sign in with Google</Link>
-                    <br />
-                    <Link to='/signin' className="session-other-links link">Sign in with Facebook</Link>
-                    <br />
-                    <Link to='/signin' className="session-other-links link">Sign in with Apple</Link>
-                    <br /> */}
                     <Link className="session-link link" to='/signup'>Sign up for Eventdim</Link>
                 </div>
             )
