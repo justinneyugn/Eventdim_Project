@@ -39,7 +39,7 @@ class EventIndexItem extends React.Component {
             <li>
                 <Link to={`/events/${this.props.event.id}`}>{this.props.event.title}</Link>
                 <br />
-                <img src={`${this.props.event.photoUrl}`} ></img>
+                {/* <img src={`${this.props.event.photoUrl}`} ></img> */}
                 <br/>
                 {editDelete()}
             </li>

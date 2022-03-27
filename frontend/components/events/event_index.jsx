@@ -27,6 +27,7 @@ class EventIndex extends React.Component {
         return (
             <div>
                 <ul>
+                    <img src="https://eventdim-seeds.s3.us-west-1.amazonaws.com/homepage.jpeg"></img>
                     {events}
                 </ul>
             </div>

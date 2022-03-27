@@ -116,6 +116,9 @@ class SessionForm extends React.Component {
                     <br />
                     {this.link()}
                 </div>
+                <div className="session-image">
+                    <img src="https://eventdim-seeds.s3.us-west-1.amazonaws.com/signin_signup.jpeg"></img>
+                </div>
             </div>
         )
     }

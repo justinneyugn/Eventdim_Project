@@ -74,7 +74,6 @@ class EventForm extends React.Component {
                     <br />
                     <button type='submit'>{this.props.formType}</button>
                 </form>
-
             </div>
         )
     }
