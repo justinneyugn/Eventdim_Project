@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-covid-container {
+    display: flex;
+    justify-content: center;
+    margin-right: 250px;
+}
+
+.home-covid-item {
+    border: 1px solid gray;
+    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    margin-top: 25px;
+}
+
+.home-covid-top {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 650;
+}
+
+.home-covid-bottom {
+    font-size: 14px;
+    color: #39364F;
+}

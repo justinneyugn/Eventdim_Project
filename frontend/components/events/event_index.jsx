@@ -25,11 +25,29 @@ class EventIndex extends React.Component {
             )
         })
         return (
-            <div>
-                <ul>
+            <div className="home-container">
+                <section className='home-picture'>
                     <img src="https://eventdim-seeds.s3.us-west-1.amazonaws.com/homepage.jpeg"></img>
-                    {events}
-                </ul>
+                </section>
+                <section className="home-bottom-half-container">
+                    <div className='home-bottom-half'>
+                        <div className='home-covid-container'>
+                            <div className='home-covid-item'>
+                                <div className='home-covid-top'>
+                                    Re-open confidently with Eventdim's COVID-19 Safety Playbook
+                                </div>
+                                <span className='home-covid-bottom'>
+                                    We partnered with risk management and health experts to empower
+                                    event creators to thoughtfully consider potential safety and security
+                                    risks at your event.
+                                </span>
+                            </div>
+                        </div>
+                        <ul>
+                            {events}
+                        </ul>
+                    </div>
+                </section>
             </div>
         )
     }
