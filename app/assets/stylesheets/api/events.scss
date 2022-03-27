@@ -1,3 +1,23 @@
 // Place all the styles related to the api/events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.events-container {
+    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+    font-size: 14px;
+    color: black;
+    background-color: white;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.events-navbar {
+    background: #39364F;
+    color: red;
+}
+

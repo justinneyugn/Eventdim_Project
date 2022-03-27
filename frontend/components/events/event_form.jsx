@@ -31,8 +31,17 @@ class EventForm extends React.Component {
         
         if (!this.props.event) return null;
         return (
-            <div>
-                <Link to='/' className='website_name'>eventdim</Link>
+            <div className="events-container">
+                <nav className="events-navbar">
+                    <div className="events-nav-container">
+                        <Link to='/' className='website_name events-logo'>eventdim</Link>
+                        <ul class="events-ul">
+                            <li>
+                                <Link to='/'>{this.props.currentUser.email}</Link>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
                 <h1>{this.props.formType}</h1>
                 <form onSubmit={this.handleSubmit}>
                     <label>Title</label>

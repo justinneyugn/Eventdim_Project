@@ -11,7 +11,7 @@ class EditEventForm extends React.Component {
     }
     
     render () {
-        const { event, formType, submitEvent, history } = this.props;
+        const { event, formType, submitEvent, history, currentUser } = this.props;
 
         if (!event) return null;
         return (
@@ -19,6 +19,7 @@ class EditEventForm extends React.Component {
                 event={event}
                 formType={formType}
                 submitEvent={submitEvent}
+                currentUser={currentUser}
                 history={history} />
         );
     }
@@ -27,6 +28,7 @@ class EditEventForm extends React.Component {
 const mSTP = (state, ownProps) => {
     return ({
         event: state.entities.events[ownProps.match.params.eventId],
+        currentUser: state.session.currentUser,
         formType: 'Edit'
     });
 };
