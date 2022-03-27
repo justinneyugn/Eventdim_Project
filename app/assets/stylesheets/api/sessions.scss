@@ -5,8 +5,10 @@
 .session-container {
     display: flex;
     flex-direction: column;
-    width: 715px;
+    // width: 715px;
+    width: 50%;
     height: 750px;
+    // height: 50%;
     align-items: center;
     font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
 }
@@ -41,8 +43,35 @@
     width: 350px;
     height: 200px;
 }
-.session-email {
+.session-input-outer {
     flex: 1;
+    border: 1px  solid lightgray;
+    font-size: 14px;
+}
+
+.session-input-inner {
+    background-color: #E8F0FE;
+    padding: 6px 12px 3px;
+    margin: 1px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-prompt {
+    background-color: #E8F0FE;
+    color: 	#808080;
+    height: 75%;
+    margin-bottom: -15px;
+    font-size: 12px;
+}
+
+.session-input {
+    background-color: #E8F0FE;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
 }
 
 .session-password {

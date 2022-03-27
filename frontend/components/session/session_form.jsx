@@ -71,10 +71,10 @@ class SessionForm extends React.Component {
     
     errors(){
         return (
-            <ul>
+            <ul className="errors-ul">
                 {this.props.errors.map( (error, idx) => {
                     return (
-                        <li key={`error-${idx}`}>{error}</li>
+                        <li className="errors-li" key={`error-${idx}`}>{error}</li>
                     )
                 })}
             </ul>
@@ -88,21 +88,31 @@ class SessionForm extends React.Component {
                 <h1 className="session-type">{this.props.formType}</h1>
                 <div className="session-errors">{this.errors()}</div>
                 <form className="session-form" onSubmit={this.handleSubmit}>
-                    <label className="session-email">Email address
-                        <input 
-                            type="text"
-                            onChange={this.updateEmail}
-                            value={this.state.email}
-                        />
-                    </label>
+                    <div className="session-input-outer">
+                        <div className="session-input-inner">
+                            <label className="input-prompt">Email address</label>
+                            <br />
+                            <input 
+                                type="email"
+                                onChange={this.updateEmail}
+                                value={this.state.email}
+                                className="session-input"
+                            />
+                        </div>
+                    </div>
                     <br />
-                    <label className="session-password">Password
-                        <input 
-                            type="password"
-                            onChange={this.updatePassword}
-                            value={this.state.password}
-                        />
-                    </label>
+                    <div className="session-input-outer">
+                        <div className="session-input-inner">
+                            <label className="input-prompt">Password</label>
+                            <br />
+                            <input 
+                                type="password"
+                                onChange={this.updatePassword}
+                                value={this.state.password}
+                                className="session-input"
+                            />
+                        </div>
+                    </div>
                     <br />
                     <button className= "session-button" type="submit">{this.props.formType}</button>
                 </form>
