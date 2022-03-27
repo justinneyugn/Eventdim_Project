@@ -44,24 +44,24 @@ class SessionForm extends React.Component {
         if (this.props.formType === 'Create an account') {
             return (
                 <div>
-                    <Link to='/signup' className="session-other-links link">Sign up with Google</Link>
+                    {/* <Link to='/signup' className="session-other-links link">Sign up with Google</Link>
                     <br />
                     <Link to='/signup' className="session-other-links link">Sign up with Facebook</Link>
                     <br />
                     <Link to='/signup' className="session-other-links link">Sign up with Apple</Link>
-                    <br />
+                    <br /> */}
                     <Link className="session-link link" to='/signin'>Log In</Link>
                 </div>
             )
         } else {
             return (
                 <div>
-                    <Link to='/signin' className="session-other-links link">Sign in with Google</Link>
+                    {/* <Link to='/signin' className="session-other-links link">Sign in with Google</Link>
                     <br />
                     <Link to='/signin' className="session-other-links link">Sign in with Facebook</Link>
                     <br />
                     <Link to='/signin' className="session-other-links link">Sign in with Apple</Link>
-                    <br />
+                    <br /> */}
                     <Link className="session-link link" to='/signup'>Sign up for Eventdim</Link>
                 </div>
             )
@@ -84,42 +84,50 @@ class SessionForm extends React.Component {
     render() {
         return (
             <div className="session-container">
-                <h1 className="session-logo"><a href="http://localhost:3000/#/" className='website_name'>eventdim</a></h1>
-                <h1 className="session-type">{this.props.formType}</h1>
-                <div className="session-errors">{this.errors()}</div>
-                <form className="session-form" onSubmit={this.handleSubmit}>
-                    <div className="session-input-outer">
-                        <div className="session-input-inner">
-                            <label className="input-prompt">Email address</label>
-                            <br />
-                            <input 
-                                type="email"
-                                onChange={this.updateEmail}
-                                value={this.state.email}
-                                className="session-input"
-                            />
+                <div className="session-inner">
+                    <h1 className="session-logo"><a href="http://localhost:3000/#/" className='website_name'>eventdim</a></h1>
+                    <h1 className="session-type">{this.props.formType}</h1>
+                    <div className="session-errors">{this.errors()}</div>
+                    <form className="session-form" onSubmit={this.handleSubmit}>
+                        <div className="session-input-outer">
+                            <div className="session-input-inner">
+                                <label className="input-prompt">Email address</label>
+                                <br />
+                                <input 
+                                    type="email"
+                                    onChange={this.updateEmail}
+                                    value={this.state.email}
+                                    className="session-input"
+                                />
+                            </div>
                         </div>
+                        <br />
+                        <div className="session-input-outer">
+                            <div className="session-input-inner">
+                                <label className="input-prompt">Password</label>
+                                <br />
+                                <input 
+                                    type="password"
+                                    onChange={this.updatePassword}
+                                    value={this.state.password}
+                                    className="session-input"
+                                />
+                            </div>
+                        </div>
+                        <br />
+                        <button className= "session-button" type="submit">{this.props.formType}</button>
+                    </form>
+                    <br />
+                    <div className="line-and-oval">
+                        <hr></hr>
+                        <div className="session-or-container">
+                            <p className="session-or">or</p>
+                        </div>
+                        <hr></hr>
                     </div>
                     <br />
-                    <div className="session-input-outer">
-                        <div className="session-input-inner">
-                            <label className="input-prompt">Password</label>
-                            <br />
-                            <input 
-                                type="password"
-                                onChange={this.updatePassword}
-                                value={this.state.password}
-                                className="session-input"
-                            />
-                        </div>
-                    </div>
-                    <br />
-                    <button className= "session-button" type="submit">{this.props.formType}</button>
-                </form>
-                <br />
-                <p className="session-or">or</p>
-                <br />
-                {this.link()}
+                    {this.link()}
+                </div>
             </div>
         )
     }
