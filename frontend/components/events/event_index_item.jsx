@@ -15,9 +15,9 @@ class EventIndexItem extends React.Component {
         })
     }
 
-    componentDidMount(){
-        this.props.requestEvent(this.props.event.id);
-    }
+    // componentDidMount(){
+    //     this.props.requestEvent(this.props.event.id);
+    // }
 
     render(){
         // if (!this.props.event) return null;
@@ -38,6 +38,8 @@ class EventIndexItem extends React.Component {
         return (
             <li>
                 <Link to={`/events/${this.props.event.id}`}>{this.props.event.title}</Link>
+                <br />
+                <img src={`${this.props.event.photoUrl}`} ></img>
                 <br/>
                 {editDelete()}
             </li>
