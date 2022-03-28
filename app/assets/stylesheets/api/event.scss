@@ -1,5 +1,103 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
 }
 
+.show-page {
+    display: flex;
+    justify-content: center;
+    background-color: #F5F5F5;
+}
+
+.show-main-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 500px;
+    box-shadow: 2px 2px 5px gray, -2px -2px 5px gray;
+
+}
+
+.show-top-portion {
+    display: flex;
+}
+
+.show-top-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.show-title {
+    margin-left: 20px;
+    margin-top: 75px;
+}
+
+.title {
+    color: #1E0A3C;
+    font-weight: 600;
+
+}
+
+.show-price {
+    margin-left: 20px;
+    margin-top: 100px;
+}
+.price {
+    color: #39364F;
+    font-weight: 400;
+}
+
+.show-bottom-portion {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.show-information {
+    margin-right: 100px;
+    padding-left: 100px;
+    color: #6F7287;
+    font-size: 16px;
+    padding-bottom: 100px;
+    text-align: center;
+    line-height: 2;
+}
+
+.show-date-location {
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+    width: 500px;
+    color: #6F7287;
+}
+
+.date-title {
+    font-size: 17px;
+    font-weight: 500;
+    color: #1E0A3C;
+}
+
+.date {
+    display: inline-block;
+    white-space: nowrap;
+    margin-top: 25px;
+    color: #39364F;
+}
+
+.show-place {
+    margin-top: 75px;
+}
+
+.show-location {
+    font-size: 17px;
+    font-weight: 500;
+    color: #1E0A3C;
+}
+.place {
+    display: inline-block;
+    white-space: nowrap;
+    margin-top: 25px;
+    color: #39364F;
+}

@@ -16,13 +16,12 @@
 }
 
 .home-covid-item {
-    // font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
     padding-right: 50px;
     margin-top: 25px;
-    box-shadow: 2px 2px 5px lightgray;
+    box-shadow: 2px 2px 5px lightgray, -2px -2px 5px lightgray;
 }
 
 .home-covid-top {
@@ -60,13 +59,8 @@
 }
 
 .home-events {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // border: 1px solid gray;
     display: grid;
     grid-template-columns: repeat(3, 10fr);
-    // gap: 325px;
     gap: 10px;
 }
 

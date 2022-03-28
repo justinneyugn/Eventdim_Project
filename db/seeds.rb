@@ -16,10 +16,16 @@ user2 = User.create(email: 'judnguyen@ucdavis.edu', password: 'jus2020$')
 user3 = User.create(email: 'hello@gmail.com', password: 'hellohello')
 
 event1 = Event.create(title: "Mix + Mingle - Sacramento's Largest Free Business Networking Event",
-    details: "Welcome Back! Sacramento's Largest Networking Mixer is back for the Spring Blossom kick off.
-
-    Please join us on Thursday, March 31st at the Mix Downtown for business networking and a social mixer unlike any other in Sacramento from 5pm-9pm
+    details: "Welcome Back! Sacramento's Largest Networking Mixer is back for 
     
+    the Spring Blossom kick off.
+
+
+    Please join us on Thursday, March 31st at the Mix Downtown for 
+    
+    business networking and a social mixer unlike any other in Sacramento from 5pm-9pm
+    
+
     We are the largest and fastest growing networking group, mixer and social event in Sacramento. Over 450 professionals from all different industries attended the last mixer. This is a great way to meet someone new, grow your circle of influence, find new career opportunities, generate awareness for your brand or business and to meet other professionals! This event is open to the piublic via tickets.
     
     *For limited table reservations and bottle service please contact Trevor Fong directly at 916.996.5024.
@@ -419,23 +425,3 @@ event22 = Event.create(title: "SacJobs Spring Career Fair",
 
 
 
-# event15 = Event.create(title: "Selfish Sunday",
-#     details: "@hellawellthy celebrates the pursuit of extreme physical, mental and social wellness through curated events, workshops and retreats. We invite you to skip brunch and cultivate wellness at Selfish Sunday.
-
-#     Selfish Sunday!
-    
-#     YOGA: We'll start the day with Kemetic yoga, led by Angie Franklin, Founder + CEO of Afro Yoga. (afroyoga.org, @afroyogabyangie on Instagram) Kemetic Yoga is a gentle and intentional practice, with heavy attention to the breath, alignment and sequencing. It's a tonic to the nervous system and a moving meditation.
-#     JOURNAL WORKSHOP: Learn how intentional journaling can improve mental health, inspire creativity and propel you forward in your pursuit of personal growth.
-#     WELLNESS CIRCLE: Connect and mingle with like-minded people who share a passion for wellness. Topics include mental health, therapy, physical and social wellness.
-#     SHOP OUR WELLNESS MARKET: Featuring wellness-centric brands and products.
-#     DJ - music played by Sacramento's @Dj__2raw
-#     Raffles & Giveaways!
-    
-#     Enter to win a Hella Wellthy gift basket ($500 value!)
-#     Don't be late! The first 25 guests will receive a Hella Wellthy swag bag upon entry!",
-#     creator_id: user1.id,
-#     location: "The Urban Hive",
-#     ticket_price: 30.00)
-
-#     file15 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/girlfriends.jpeg')
-#     event15.photo.attach(io: file15, filename: 'girlfriends.jpeg')

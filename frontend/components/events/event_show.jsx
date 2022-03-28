@@ -23,7 +23,7 @@ class EventShow extends React.Component {
             </div>
         );
         return (
-            <div className='event-container'>
+            <div className='show-container'>
                 <header className="nav-bar">
                     <Link to='/' className='website_name'>eventdim</Link>
                     <nav>
@@ -33,33 +33,33 @@ class EventShow extends React.Component {
                         </ul>
                     </nav>
                 </header>
-                <div className='event-show-page'>
-                    <div className='event-main-info'>
-                        <div className='event-top-portion'>
-                            <div className='event-picture'>
-                                <img src={this.props.event.photoUrl}></img>
+                <div className='show-page'>
+                    <div className='show-main-info'>
+                        <div className='show-top-portion'>
+                            <div className='show-picture'>
+                                <img src={this.props.event.photoUrl} width="573.98" height="290"></img>
                             </div>
-                            <div className='event-top-right'>
-                                <div className='event-title'>
-                                    <p>{this.props.event.title}</p>
+                            <div className='show-top-right'>
+                                <div className='show-title'>
+                                    <h3 className='title'>{this.props.event.title}</h3>
                                 </div>
-                                <div className='event-price'>
-                                    <h3>${this.props.event.ticket_price}</h3>
+                                <div className='show-price'>
+                                    <h4 className='price'>${this.props.event.ticket_price}</h4>
                                 </div>
                             </div>
                         </div>
-                        <div className='event-bottom-portion'>
-                            <div className='event-information'>
+                        <div className='show-bottom-portion'>
+                            <div className='show-information'>
                                 <p>{this.props.event.details}</p>
                             </div>
-                            <div className='event-date-location'>
-                                <div className='event-date'>
-                                    <h3>Date</h3>
-                                    <h3 className='date'>{this.props.event.date}</h3>
+                            <div className='show-date-location'>
+                                <div className='show-date'>
+                                    <p className='date-title'>Date</p>
+                                    <p className='date'>{this.props.event.date}</p>
                                 </div>
-                                <div className='event-place'>
-                                    <h3>Location</h3>
-                                    <h3 className='place'>{this.props.event.location}</h3>
+                                <div className='show-place'>
+                                    <p className='show-location'>Location</p>
+                                    <p className='place'>{this.props.event.location}</p>
                                 </div>
                             </div>
                         </div>
