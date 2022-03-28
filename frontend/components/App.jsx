@@ -19,8 +19,8 @@ const App = () => (
         <Route path="/events/:eventId" component={EventShowContainer} />
 
         {/* these are only seen if you are logged out */}
-        <AuthRoute path="/signin" component={LoginFormContainer} />
-        <AuthRoute path="/signup" component={SignupFormContainer} />
+        <AuthRoute exact path="/signin" component={LoginFormContainer} />
+        <AuthRoute exact path="/signup" component={SignupFormContainer} />
 
         <Route exact path="/" component={NavBarContainer} />
         <Route exact path="/" component={EventIndexContainer} />

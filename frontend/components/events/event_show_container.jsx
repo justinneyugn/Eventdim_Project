@@ -1,16 +1,19 @@
 import { connect } from 'react-redux';
 import { requestEvent } from '../../actions/event_actions';
+import { logout } from '../../actions/session_actions';
 import EventShow from './event_show';
 
 const mSTP = (state, ownProps) => {
     return ({
-        event: state.entities.events[ownProps.match.params.eventId]
+        event: state.entities.events[ownProps.match.params.eventId],
+        currentUser: state.session.currentUser
     });
 };
 
 const mDTP = dispatch => {
     return ({
-        requestEvent: eventId => dispatch(requestEvent(eventId))
+        requestEvent: eventId => dispatch(requestEvent(eventId)),
+        logout: () => dispatch(logout())
     });
 };
 
