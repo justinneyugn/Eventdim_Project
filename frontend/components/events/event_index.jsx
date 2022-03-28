@@ -56,7 +56,7 @@ class EventIndex extends React.Component {
                             </div>
                         </div>
                         <br />
-                        <ul>
+                        <ul className='home-events'>
                             {events}
                         </ul>
                     </div>

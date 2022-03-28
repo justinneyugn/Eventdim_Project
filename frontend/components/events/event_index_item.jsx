@@ -36,12 +36,19 @@ class EventIndexItem extends React.Component {
             }
         }
         return (
-            <li>
-                <Link to={`/events/${this.props.event.id}`}>{this.props.event.title}</Link>
-                <br />
-                {/* <img src={`${this.props.event.photoUrl}`} ></img> */}
-                <br/>
-                {editDelete()}
+            <li className="event-item-container">
+                <Link className="event-item" to={`/events/${this.props.event.id}`}>
+                    <img src={`${this.props.event.photoUrl}`} width="357.98" height="178.98"></img>
+                    <button>Like</button>
+                    <div className="event-item-bottom-container">
+                        <div className="event-item-bottom">
+                            <h3>{this.props.event.title}</h3>
+                            <h5>{this.props.event.location}</h5>
+                            <h5>Starts at ${this.props.event.ticket_price}</h5>
+                            {editDelete()}
+                        </div>
+                    </div>
+                </Link>
             </li>
         )
     }
