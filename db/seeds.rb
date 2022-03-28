@@ -15,30 +15,30 @@ user1 = User.create(email: 'test@gmail.com', password: 'testtest')
 user2 = User.create(email: 'judnguyen@ucdavis.edu', password: 'jus2020$')
 user3 = User.create(email: 'hello@gmail.com', password: 'hellohello')
 
-event1 = Event.create(title: "Mix + Mingle - Sacramento's Largest Free Business Networking Event",
-    details: "Welcome Back! Sacramento's Largest Networking Mixer is back for the Spring Blossom kick off.
+# event1 = Event.create(title: "Mix + Mingle - Sacramento's Largest Free Business Networking Event",
+#     details: "Welcome Back! Sacramento's Largest Networking Mixer is back for the Spring Blossom kick off.
 
-    Please join us on Thursday, March 31st at the Mix Downtown for business networking and a social mixer unlike any other in Sacramento from 5pm-9pm
+#     Please join us on Thursday, March 31st at the Mix Downtown for business networking and a social mixer unlike any other in Sacramento from 5pm-9pm
     
-    We are the largest and fastest growing networking group, mixer and social event in Sacramento. Over 450 professionals from all different industries attended the last mixer. This is a great way to meet someone new, grow your circle of influence, find new career opportunities, generate awareness for your brand or business and to meet other professionals! This event is open to the piublic via tickets.
+#     We are the largest and fastest growing networking group, mixer and social event in Sacramento. Over 450 professionals from all different industries attended the last mixer. This is a great way to meet someone new, grow your circle of influence, find new career opportunities, generate awareness for your brand or business and to meet other professionals! This event is open to the piublic via tickets.
     
-    *For limited table reservations and bottle service please contact Trevor Fong directly at 916.996.5024.
+#     *For limited table reservations and bottle service please contact Trevor Fong directly at 916.996.5024.
     
-    Event Highlights Include:
+#     Event Highlights Include:
     
-    - Professional, Business Networking + Social Mixer IG:_mixandmingle_
+#     - Professional, Business Networking + Social Mixer IG:_mixandmingle_
     
-    - Interactive Photo Booth by Colby Barrett Photography IG: @cb_photography916
+#     - Interactive Photo Booth by Colby Barrett Photography IG: @cb_photography916
     
-    - Event Photo + Video by Black Tape Company IG: @blacktapecompany @virfxmoore
+#     - Event Photo + Video by Black Tape Company IG: @blacktapecompany @virfxmoore
     
-    - DJ 5pm-9pm by TwoDirty IG: @twodirtymusic",
-    creator_id: user1.id,
-    location: "Mix Downtown",
-    ticket_price: 0.00)
+#     - DJ 5pm-9pm by TwoDirty IG: @twodirtymusic",
+#     creator_id: user1.id,
+#     location: "Mix Downtown",
+#     ticket_price: 0.00)
 
-    file = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/mix_and_mingle.jpeg')
-    event1.photo.attach(io: file, filename: 'mix_and_mingle.jpg')
+#     file1 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/mix_and_mingle.jpeg')
+#     event1.photo.attach(io: file1, filename: 'mix_and_mingle.jpg')
 
 # event2 = Event.create(title: "Loud Festival",
 #     details: "Loud Festival is a three-day event, held at Cesar Chavez Park. This inaugural year, the festival will be headlined 
@@ -49,6 +49,9 @@ event1 = Event.create(title: "Mix + Mingle - Sacramento's Largest Free Business 
 #     creator_id: user1.id,
 #     location: "Cesar Chavez Plaza",
 #     ticket_price: 65.00)
+
+#     file2 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/loud_festival.jpeg')
+#     event2.photo.attach(io: file2, filename: 'loud_festival.jpeg')
 
 # event3 = Event.create(title: "Sacramento Grilled Cheese Festival 2022",
 #     details: "The Sacramento Grilled Cheese Festival is a full weekend of events dedicated to the one food you never out grow.... GRILLED CHEESE! We've paired our grilled cheese with everything from craft beer to bounce houses so we've got something for everyone.
@@ -77,6 +80,9 @@ event1 = Event.create(title: "Mix + Mingle - Sacramento's Largest Free Business 
 #     location: "Southside Park",
 #     ticket_price: 8.00)
 
+#     file3 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/grilled_cheese.jpeg')
+#     event3.photo.attach(io: file3, filename: 'grilled_cheese.jpeg')
+
 # event4 = Event.create(title: "Self Care Sundays | Season 3 Opener at the Old Sugar Mill Winery",
 #     details: "By taking part in this event you grant the event organizers full rights to use the images resulting from the photography/video filming, and any reproductions or adaptions of the images for social media, press releases, and fundraising opportunities.
 
@@ -89,6 +95,9 @@ event1 = Event.create(title: "Mix + Mingle - Sacramento's Largest Free Business 
 #     creator_id: user2.id,
 #     location: "Old Sugar Mill",
 #     ticket_price: 35.00)
+
+#     file4 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/self_care.jpeg')
+#     event4.photo.attach(io: file4, filename: 'self_care.jpeg')
 
 # event5 = Event.create(title: "Margarita Fest",
 #     details: "Come Celebrate Cinco de Mayo with us at the Margarita Fest!
@@ -116,6 +125,10 @@ event1 = Event.create(title: "Mix + Mingle - Sacramento's Largest Free Business 
 #     location: "Cesar Chavez Plaza",
 #     ticket_price: 60.00)
 
+#     file5 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/margarita.jpeg')
+#     event5.photo.attach(io: file5, filename: 'margarita.jpeg')
+
+
 # event6 = Event.create(title: "Celebrating The Life of Deacon Dr. Timothy D. Poston, Sr.",
 #     details: "Celebration Musical:
 #     Monday, April 4, 2022 | 7:00PM
@@ -128,6 +141,10 @@ event1 = Event.create(title: "Mix + Mingle - Sacramento's Largest Free Business 
 #     creator_id: user1.id,
 #     location: "St. Paul Baptist Church",
 #     ticket_price: 0.00)
+
+#     file6 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/deacon.jpeg')
+#     event6.photo.attach(io: file6, filename: 'deacon.jpeg')
+
 
 # event7 = Event.create(title: "Aries Moon Circus presents... That Circus Show!",
 #     details: "THAT CIRCUS SHOW is a modern take on vintage circus, featuring amazing acrobatics, awesome aerials, jaw-dropping juggling, superior strength, lazy lions, and word has it there may even be some beautiful bearded ladies afoot, so be sure to dress to impress! 
@@ -146,6 +163,9 @@ event1 = Event.create(title: "Mix + Mingle - Sacramento's Largest Free Business 
 #     location: "The Colonial Theatre",
 #     ticket_price: 35.00)
 
+#     file7 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/circus.jpeg')
+#     event7.photo.attach(io: file7, filename: 'circus.jpeg')
+
 # event8 = Event.create(title: "Muddy Princess Sacramento, CA",
 #     details: "Our event is for Princesses of all sizes, ages and fitness levels. We don’t focus on fastest times or competitions, we focus on fun so be prepared to run, walk, crawl, climb, slide, balance and laugh your way along our course for an amazing “girls dirty day out!”
 
@@ -159,6 +179,10 @@ event1 = Event.create(title: "Mix + Mingle - Sacramento's Largest Free Business 
 #     creator_id: user1.id,
 #     location: "Murieta Equestrian Center",
 #     ticket_price: 49.00)
+
+#     file8 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/muddy.jpeg')
+#     event8.photo.attach(io: file8, filename: 'muddy.jpeg')
+    
 
 # event9 = Event.create(title: "Bass Therapy w/ Xhale Ghost & More!",
 #     details: "Sacramento Bass Therapy returns!
@@ -178,7 +202,10 @@ event1 = Event.create(title: "Mix + Mingle - Sacramento's Largest Free Business 
 #     - Good Music 🎶v",
 #     creator_id: user1.id,
 #     location: "The Colonial Theatre",
-#     ticket_price: 17.50)
+#     ticket_price: 17.00)
+
+#     file9 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/bass.jpeg')
+#     event9.photo.attach(io: file9, filename: 'bass.jpeg')
 
 # event10 = Event.create(title: "Sacramento Vegan Food Festival Spring 2022",
 #     details: "Sacramento Vegan Food Festival moves to CAPITOL MALL Downtown Sacramento.
@@ -189,6 +216,9 @@ event1 = Event.create(title: "Mix + Mingle - Sacramento's Largest Free Business 
 #     creator_id: user2.id,
 #     location: "Capitol Mall",
 #     ticket_price: 15.00)
+
+#     file10 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/vegan.jpeg')
+#     event10.photo.attach(io: file10, filename: 'vegan.jpeg')
 
 # event11 = Event.create(title: "Sunday Movie Matinees at the Guild",
 #     details: "Join us for free family movies at the Guild Theater!
@@ -220,6 +250,9 @@ event1 = Event.create(title: "Mix + Mingle - Sacramento's Largest Free Business 
 #     location: "The Guild Theater",
 #     ticket_price: 0.00)
 
+#     file11 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/matinees.jpeg')
+#     event11.photo.attach(io: file11, filename: 'matinees.jpeg')
+
 # event12 = Event.create(title: "Brunch In The Park",
 #     details: "Chasten Gold Nonprofit is hosting Brunch in the Park for the 1st time this year in Sacramento, CA after cancellations in 2020. Brunch in the Park anticipates 2,500+ attendees and will feature Bottomless Mimosas, Bloody Mary's by Tito's Vodka, and Beer and Wine from local breweries and wineries. Brunch favorites will be made available for purchase by local food trucks and restaurants.
 #     Each attendee will be given a souvenir glass and an overall epic day of brunch and beverage sampling. Proceeds will benefit the 501c3 Chasten Gold Nonprofit, FEIN: 84-2404682.",
@@ -227,35 +260,143 @@ event1 = Event.create(title: "Mix + Mingle - Sacramento's Largest Free Business 
 #     location: "Franklin D. Roosevelt Park",
 #     ticket_price: 75.00)
 
-# event13 = Event.create(title: "Bradley Ranch Winery 3rd Annual Egg Drop! Elk Grove",
-#     details: "The Easter Egg Hunt for kids will start at 10:30am promptly. There will only be 1 egg hunt for all ages.
-#     We will have over 5000 candy and toy filled eggs! With a few golden eggs for special prizes!
-#     Wine tasting, food trucks, craft fair, face painting, jump houses, fishing, wagon rides, and games will begin right after the Easter Egg Hunt - come spend the afternoon at the ranch!
-#     Space is limited so sign up early.
-#     $25 for each egg hunter.
-#     This is a private ticketed event. All egg hunters need a ticket. Only ticket holders will be allowed to enter the egg hunt.
-#     Free Parking - No refunds.",
-#     creator_id: user2.id,
-#     location: "Bradley Ranch Winery",
-#     ticket_price: 25.00)
+#     file12 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/brunch.jpeg')
+#     event12.photo.attach(io: file12, filename: 'brunch.jpeg')
+    
 
-# event14 = Event.create(title: "BSMF: Girlfriend's Day Retreat",
-#     details: "Black Sistahs Making Friends: Girlfriend's Day Retreat is a one-day sister bonding event with fun, food, and games. A day to make new connections and new friends.
-#     Come prepared for outdoor games so dress comfortably (No Heels). Bring your smiles and warm spirit. You may never know who needs it. There will be group discussions and panels. This event is meant to do more than just shake a hand. The goal is to make a friend. We look forward to seeing all our beautiful sisthahs.
-#     There will be continental breakfast and lunch.
-#     Registration: 10am-11am
-#     All attendees must be 18 or older.
-#     No children are permitted.
-#     This event is sponsored by Lady Charmaine and Black Sistahs Making Friends Facebook Group:
-#     Mary & Berries Beauty
-#     Wellness of Life
-#     Prairie Spring Estates
-#     Training with Troya
-#     Last Call Mobile Bartending Service
-#     There are no refunds. In case of bad weather conditions, the event will be rescheduled and all ticket purchases will be honored.",
-#     creator_id: user3.id,
-#     location: "Prairie Spring Estates",
-#     ticket_price: 45.00)
+event13 = Event.create(title: "Bradley Ranch Winery 3rd Annual Egg Drop! Elk Grove",
+    details: "The Easter Egg Hunt for kids will start at 10:30am promptly. There will only be 1 egg hunt for all ages.
+    We will have over 5000 candy and toy filled eggs! With a few golden eggs for special prizes!
+    Wine tasting, food trucks, craft fair, face painting, jump houses, fishing, wagon rides, and games will begin right after the Easter Egg Hunt - come spend the afternoon at the ranch!
+    Space is limited so sign up early.
+    $25 for each egg hunter.
+    This is a private ticketed event. All egg hunters need a ticket. Only ticket holders will be allowed to enter the egg hunt.
+    Free Parking - No refunds.",
+    creator_id: user2.id,
+    location: "Bradley Ranch Winery",
+    ticket_price: 25.00)
+
+    file13 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/bradley_ranch.jpeg')
+    event13.photo.attach(io: file13, filename: 'bradley_ranch.jpeg')
+    
+
+event14 = Event.create(title: "BSMF: Girlfriend's Day Retreat",
+    details: "Black Sistahs Making Friends: Girlfriend's Day Retreat is a one-day sister bonding event with fun, food, and games. A day to make new connections and new friends.
+    Come prepared for outdoor games so dress comfortably (No Heels). Bring your smiles and warm spirit. You may never know who needs it. There will be group discussions and panels. This event is meant to do more than just shake a hand. The goal is to make a friend. We look forward to seeing all our beautiful sisthahs.
+    There will be continental breakfast and lunch.
+    Registration: 10am-11am
+    All attendees must be 18 or older.
+    No children are permitted.
+    This event is sponsored by Lady Charmaine and Black Sistahs Making Friends Facebook Group:
+    Mary & Berries Beauty
+    Wellness of Life
+    Prairie Spring Estates
+    Training with Troya
+    Last Call Mobile Bartending Service
+    There are no refunds. In case of bad weather conditions, the event will be rescheduled and all ticket purchases will be honored.",
+    creator_id: user3.id,
+    location: "Prairie Spring Estates",
+    ticket_price: 45.00)
+
+    file14 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/girlfriends.jpeg')
+    event14.photo.attach(io: file14, filename: 'girlfriends.jpeg')
+
+
+event16 = Event.create(title: "Chicano Batman",
+    details: "Los Angeles psych-soul four-piece Chicano Batman live at the Crest",
+    creator_id: user2.id,
+    location: "Crest Theatre",
+    ticket_price: 28.00)
+
+    file16 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/batman.jpeg')
+    event16.photo.attach(io: file16, filename: 'batman.jpeg')
+
+event17 = Event.create(title: "Old Sugar Mill Wedding Open House 2022",
+    details: "Join us at the Old Sugar Mill Wedding Open House.
+
+    Meet our preferred vendors
+    Complimentary Wine Glass and Champagne Pour
+    Self Guided Tours of the Venue
+    Free Admission with advance registration
+    See the latest trends in wedding & event design
+    Food Trucks onsite",
+    creator_id: user3.id,
+    location: "Old Sugar Mill",
+    ticket_price: 0.00)
+
+    file17 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/wedding.jpg')
+    event17.photo.attach(io: file17, filename: 'wedding.jpeg')
+
+event18 = Event.create(title: "Trish's All White Birthday Party",
+    details: "Trish is at it again! Celebrating her birthday, the only way she knows how, with style, class, and drama free!
+    Come out, May 14th, 2022, to party and celebrate the life of this amazing queen. Come in your best All White Attire.
+    DJ Mel and DJ Smurf will be in the building
+    Doors open at 9:00pm. This birthday bash is for the Grown & Sexy. So, bring good vibes only and lets party.
+    Tickets- $20.00/$30.00
+    This event is - 21+ Up
+    DRESS CODE STRICTLY ENFORCED!!! DRESS to Impress All White, Grown & Sexy Attire
+    No T-shirts, hoodies, or baseball caps.
+    For more information, contact 916concertseries@gmail.com",
+    creator_id: user1.id,
+    location: "1107 Firehouse Alley
+    Sacramento, CA 95814",
+    ticket_price: 30.00)
+
+    file18 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/trish.jpeg')
+    event18.photo.attach(io: file18, filename: 'trish.jpeg')
+
+event19 = Event.create(title: "Sunday Morning Vibes",
+    details: "Sunday Morning Vibes is Sacramento's newest talk show that occurs every Sunday from 10am-2pm
+
+    Every Sunday morning from 10am-11am we'll interview an artist in front of a live crowd of twenty people. From 12pm-2pm the audience will enjoy an intimate performance by our featured artist of the week. The audience can enjoy the wonderful taste of fresh brewed coffee / tea from some of your local hot spots while listening to the sweet sound of music and getting to know some of the dopest artists our city has to offer. Start your Sundays with the right vibe.",
+    creator_id: user2.id,
+    location: "3400 Broadway",
+    ticket_price: 10.00)
+
+    file19 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/vibes.jpeg')
+    event19.photo.attach(io: file19, filename: 'vibes.jpeg')
+
+event20 = Event.create(title: "Delta High School - Disney's Lion King Jr.",
+    details: "THANK YOU to our amazing sponsors! IF YOU'D LIKE TO JOIN THEM (and have your company logo printed in the program), please select a date to purchase tickets and see our sponsorship or custom donation options. :) Need logo by March 16th, but donations welcome anytime! :) THANK YOU Clark Pacific, Elevation Ten, Stillwater Orchards, Heringer Estates, Carvalho Family Winery, The Clarksburg Marina, Dinky Diner, Bogle Vineyards, Kirchoff Family Wines, Freeport Bar + Grill, Husick's Taphouse, Twisted River Wines and S.H. Merwin and Sons, Inc.
+
+    The African savannah comes to life in Disney's The Lion King Jr. Follow Simba and an unforgettable cast of characters in the journey from Pride Rock to the jungle... and back again, in this inspiring, coming-of-age tale.",
+    creator_id: user3.id,
+    location: "Clarksburg Middle School Auditorium",
+    ticket_price: 10.00)
+
+    file20 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/delta.jpeg')
+    event20.photo.attach(io: file20, filename: 'delta.jpeg')
+
+event21 = Event.create(title: "Girls Night Out",
+    details: "The all new #GirlsNightOut #GNO
+
+    Every Thursday at Liaison Lounge. Call your girlfriends and come for some dancing, drinking and fun.
+    
+    We will have DJ Supe playing the best in R&B, Throwbacks, 90s, 2000s, and todays hits.
+    
+    Take advantage of our 2 for 1 special at the bar from 8pm-10pm and grab something tasty to eat.
+    
+    Get cute and come through! No Cover
+    
+    Who’s coming?",
+    creator_id: user3.id,
+    location: "Liaison Lounge",
+    ticket_price: 0.00)
+
+    file21 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/gno.jpeg')
+    event21.photo.attach(io: file21, filename: 'gno.jpeg')
+
+event22 = Event.create(title: "SacJobs Spring Career Fair",
+    details: "Whether you're unemployed or simply looking to make a career change, you will have the opportunity to network, learn the skills needed to land your dream job, or even get hired on the spot!",
+    creator_id: user1.id,
+    location: "Lions Gate Hotel",
+    ticket_price: 0.00)
+
+    file22 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/sacjobs.png')
+    event22.photo.attach(io: file22, filename: 'sacjobs.png')
+
+
+
 
 # event15 = Event.create(title: "Selfish Sunday",
 #     details: "@hellawellthy celebrates the pursuit of extreme physical, mental and social wellness through curated events, workshops and retreats. We invite you to skip brunch and cultivate wellness at Selfish Sunday.
@@ -275,74 +416,5 @@ event1 = Event.create(title: "Mix + Mingle - Sacramento's Largest Free Business 
 #     location: "The Urban Hive",
 #     ticket_price: 30.00)
 
-# event16 = Event.create(title: "Chicano Batman",
-#     details: "Los Angeles psych-soul four-piece Chicano Batman live at the Crest",
-#     creator_id: user2.id,
-#     location: "Crest Theatre",
-#     ticket_price: 28.00)
-
-# event17 = Event.create(title: "Old Sugar Mill Wedding Open House 2022",
-#     details: "Join us at the Old Sugar Mill Wedding Open House.
-
-#     Meet our preferred vendors
-#     Complimentary Wine Glass and Champagne Pour
-#     Self Guided Tours of the Venue
-#     Free Admission with advance registration
-#     See the latest trends in wedding & event design
-#     Food Trucks onsite",
-#     creator_id: user3.id,
-#     location: "Old Sugar Mill",
-#     ticket_price: 0.00)
-
-# event18 = Event.create(title: "Trish's All White Birthday Party",
-#     details: "Trish is at it again! Celebrating her birthday, the only way she knows how, with style, class, and drama free!
-#     Come out, May 14th, 2022, to party and celebrate the life of this amazing queen. Come in your best All White Attire.
-#     DJ Mel and DJ Smurf will be in the building
-#     Doors open at 9:00pm. This birthday bash is for the Grown & Sexy. So, bring good vibes only and lets party.
-#     Tickets- $20.00/$30.00
-#     This event is - 21+ Up
-#     DRESS CODE STRICTLY ENFORCED!!! DRESS to Impress All White, Grown & Sexy Attire
-#     No T-shirts, hoodies, or baseball caps.
-#     For more information, contact 916concertseries@gmail.com",
-#     creator_id: user1.id,
-#     location: "1107 Firehouse Alley
-#     Sacramento, CA 95814",
-#     ticket_price: 30.00)
-
-# event19 = Event.create(title: "Sunday Morning Vibes",
-#     details: "Sunday Morning Vibes is Sacramento's newest talk show that occurs every Sunday from 10am-2pm
-
-#     Every Sunday morning from 10am-11am we'll interview an artist in front of a live crowd of twenty people. From 12pm-2pm the audience will enjoy an intimate performance by our featured artist of the week. The audience can enjoy the wonderful taste of fresh brewed coffee / tea from some of your local hot spots while listening to the sweet sound of music and getting to know some of the dopest artists our city has to offer. Start your Sundays with the right vibe.",
-#     creator_id: user2.id,
-#     location: "3400 Broadway",
-#     ticket_price: 10.00)
-
-# event20 = Event.create(title: "Delta High School - Disney's Lion King Jr.",
-#     details: "THANK YOU to our amazing sponsors! IF YOU'D LIKE TO JOIN THEM (and have your company logo printed in the program), please select a date to purchase tickets and see our sponsorship or custom donation options. :) Need logo by March 16th, but donations welcome anytime! :) THANK YOU Clark Pacific, Elevation Ten, Stillwater Orchards, Heringer Estates, Carvalho Family Winery, The Clarksburg Marina, Dinky Diner, Bogle Vineyards, Kirchoff Family Wines, Freeport Bar + Grill, Husick's Taphouse, Twisted River Wines and S.H. Merwin and Sons, Inc.
-
-#     The African savannah comes to life in Disney's The Lion King Jr. Follow Simba and an unforgettable cast of characters in the journey from Pride Rock to the jungle... and back again, in this inspiring, coming-of-age tale.",
-#     creator_id: user3.id,
-#     location: "Clarksburg Middle School Auditorium",
-#     ticket_price: 10.00)
-
-# event21 = Event.create(title: "Girls Night Out",
-#     details: "The all new #GirlsNightOut #GNO
-
-#     Every Thursday at Liaison Lounge. Call your girlfriends and come for some dancing, drinking and fun.
-    
-#     We will have DJ Supe playing the best in R&B, Throwbacks, 90s, 2000s, and todays hits.
-    
-#     Take advantage of our 2 for 1 special at the bar from 8pm-10pm and grab something tasty to eat.
-    
-#     Get cute and come through! No Cover
-    
-#     Who’s coming?",
-#     creator_id: user3.id,
-#     location: "Liaison Lounge",
-#     ticket_price: 0.00)
-
-# event22 = Event.create(title: "SacJobs Spring Career Fair",
-#     details: "Whether you're unemployed or simply looking to make a career change, you will have the opportunity to network, learn the skills needed to land your dream job, or even get hired on the spot!",
-#     creator_id: user1.id,
-#     location: "Lions Gate Hotel",
-#     ticket_price: 0.00)
+#     file15 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/girlfriends.jpeg')
+#     event15.photo.attach(io: file15, filename: 'girlfriends.jpeg')
