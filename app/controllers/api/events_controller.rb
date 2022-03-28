@@ -40,7 +40,6 @@ class Api::EventsController < ApplicationController
     def update 
         @event = Event.find(params[:id])
         if @event.update(event_params)
-            # redirect_to api_event_url(@event)
             render "api/events/show"
         else
             render json: @event.errors.full_messages, status: 422
@@ -50,7 +49,6 @@ class Api::EventsController < ApplicationController
     def destroy
         @event = Event.find(params[:id])
         if @event.destroy
-            # redirect_to api_events_url
             render "api/events/show"
         else 
             render plain: "You can't destroy what's not there."
@@ -60,6 +58,6 @@ class Api::EventsController < ApplicationController
     private
 
     def event_params
-        params.require(:event).permit(:title, :details, :creator_id, :location, :ticket_price)
+        params.require(:event).permit(:title, :details, :creator_id, :location, :ticket_price, :date)
     end
 end

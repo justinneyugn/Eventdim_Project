@@ -4,7 +4,7 @@ import EventForm from './event_form';
 
 const mSTP = state => {
     return ({
-        event: {title: '', details: '', location: '', ticket_price: 0.00},
+        event: {title: '', details: '', location: '', ticket_price: 0.00, date: ''},
         currentUser: state.session.currentUser,
         formType: 'Create an event'
     });

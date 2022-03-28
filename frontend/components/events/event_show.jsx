@@ -19,6 +19,7 @@ class EventShow extends React.Component {
                 <h2>{this.props.event.location}</h2>
                 <h3>${this.props.event.ticket_price}</h3>
                 <p>{this.props.event.details}</p>
+                <h3>{this.props.event.date}</h3>
                 <Link to='/'></Link>
             </div>
         )

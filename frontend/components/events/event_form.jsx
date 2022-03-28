@@ -72,6 +72,13 @@ class EventForm extends React.Component {
                         value={this.state.ticket_price}
                     />
                     <br />
+                    <label>Date</label>
+                    <input
+                        type="text"
+                        onChange={this.update('date')}
+                        value={this.state.date}
+                    />
+                    <br />
                     <button type='submit'>{this.props.formType}</button>
                 </form>
             </div>
