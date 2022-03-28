@@ -1,8 +1,8 @@
 .event-item-container {
-    border: 1px solid lightgray;
+    // border: 1px solid lightgray;
     display: flex;
-    justify-content: center;
-    width: 357.98;
+    justify-content: flex-start;
+    margin-right: 200px;
 }
 
 .event-item-container:hover {
@@ -10,8 +10,7 @@
 }
 
 .event-item {
-    // border: 1px solid gray;
-    width: 357.98;
+    border: 1px solid gray;
     display: flex;
     flex-direction: column;
     text-decoration: none;

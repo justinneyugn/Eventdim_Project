@@ -60,9 +60,24 @@
 }
 
 .home-events {
-    display: flex;
+    // display: flex;
     // flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     // border: 1px solid gray;
+    display: grid;
+    grid-template-columns: repeat(3, 10fr);
+    // gap: 325px;
+    gap: 10px;
+}
 
+.home-events:nth-child(3n+1) {
+    margin-left: 300px;
+}
+
+.home-events:nth-child(3n+2) {
+    padding-right: 200px;
+}
+
+.home-events:nth-child(3n+3) {
+    padding-right: 500px;
 }
