@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
 }
 
 .home-container {
@@ -15,12 +16,13 @@
 }
 
 .home-covid-item {
-    border: 1px solid gray;
-    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+    // font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
+    padding-right: 50px;
     margin-top: 25px;
+    box-shadow: 2px 2px 5px lightgray;
 }
 
 .home-covid-top {
@@ -32,4 +34,27 @@
 .home-covid-bottom {
     font-size: 14px;
     color: #39364F;
+}
+
+.home-location-container {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    margin-right: 210px;
+}
+
+.home-location-item {
+    display: flex;
+    display: 1px solid gray;
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 800px;
+}
+
+.home-popular-in {
+    margin-right: 8px;
+}
+
+.home-sacramento {
+    color: #3659E3;
 }

@@ -43,6 +43,19 @@ class EventIndex extends React.Component {
                                 </span>
                             </div>
                         </div>
+                        <div className='home-browse-section'>
+                            <div className='home-location-container'>
+                                <div className='home-location-item'>
+                                    <div className='home-popular-in'>
+                                        Events in 
+                                    </div>
+                                    <div className='home-sacramento'>
+                                        Sacramento
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
                         <ul>
                             {events}
                         </ul>
