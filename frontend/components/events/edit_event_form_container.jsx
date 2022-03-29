@@ -11,7 +11,7 @@ class EditEventForm extends React.Component {
     }
     
     render () {
-        const { event, formType, submitEvent, history, currentUser } = this.props;
+        const { event, formType, submitEvent, history, currentUser, photoUrl } = this.props;
 
         if (!event) return null;
         return (
@@ -20,6 +20,7 @@ class EditEventForm extends React.Component {
                 formType={formType}
                 submitEvent={submitEvent}
                 currentUser={currentUser}
+                photoUrl={photoUrl}
                 history={history} />
         );
     }
