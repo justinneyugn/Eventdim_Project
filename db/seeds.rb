@@ -41,8 +41,8 @@ event1 = Event.create(title: "Mix + Mingle - Sacramento's Largest Free Business 
     - DJ 5pm-9pm by TwoDirty IG: @twodirtymusic",
     creator_id: user1.id,
     location: "Mix Downtown",
-    ticket_price: 0.00)
-    # date: "Thu, March 31, 2022")
+    ticket_price: 0.00,
+    date: "Thu, March 31, 2022")
 
     file1 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/mix_and_mingle.jpeg')
     event1.photo.attach(io: file1, filename: 'mix_and_mingle.jpg')
@@ -55,8 +55,8 @@ event2 = Event.create(title: "Loud Festival",
     on-air radio disc jocks from 102.5 KSFM.",
     creator_id: user1.id,
     location: "Cesar Chavez Plaza",
-    ticket_price: 65.00)
-    # date: "Sun, April 24, 2022")
+    ticket_price: 65.00,
+    date: "Sun, April 24, 2022")
 
     file2 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/loud_festival.jpeg')
     event2.photo.attach(io: file2, filename: 'loud_festival.jpeg')
@@ -86,8 +86,8 @@ event3 = Event.create(title: "Sacramento Grilled Cheese Festival 2022",
     Visit www.SacGrilledCheese.com for additional information.",
     creator_id: user3.id,
     location: "Southside Park",
-    ticket_price: 8.00)
-    # date: "Sun, May 15, 2022")
+    ticket_price: 8.00,
+    date: "Sun, May 15, 2022")
 
     file3 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/grilled_cheese.jpeg')
     event3.photo.attach(io: file3, filename: 'grilled_cheese.jpeg')
@@ -103,8 +103,8 @@ event4 = Event.create(title: "Self Care Sundays | Season 3 Opener at the Old Sug
     importance of taking care of the mind, body, and soul!",
     creator_id: user2.id,
     location: "Old Sugar Mill",
-    ticket_price: 35.00)
-    # date: "Sun, April 3, 2022")
+    ticket_price: 35.00,
+    date: "Sun, April 3, 2022")
 
     file4 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/self_care.jpeg')
     event4.photo.attach(io: file4, filename: 'self_care.jpeg')
@@ -133,8 +133,8 @@ event5 = Event.create(title: "Margarita Fest",
     *** Tickets are non refundable.***",
     creator_id: user2.id,
     location: "Cesar Chavez Plaza",
-    ticket_price: 60.00)
-    # date: "Starting Sat, April 30")
+    ticket_price: 60.00,
+    date: "Starting Sat, April 30")
 
     file5 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/margarita.jpeg')
     event5.photo.attach(io: file5, filename: 'margarita.jpeg')
@@ -151,8 +151,8 @@ event6 = Event.create(title: "Celebrating The Life of Deacon Dr. Timothy D. Post
     If you have questions or need assistance with registration, call 707-425-1849 Monday-Friday, 9:00am - 5:00pm PT",
     creator_id: user1.id,
     location: "St. Paul Baptist Church",
-    ticket_price: 0.00)
-    # date: "Mon, April 4, 2022")
+    ticket_price: 0.00,
+    date: "Mon, April 4, 2022")
 
     file6 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/deacon.jpeg')
     event6.photo.attach(io: file6, filename: 'deacon.jpeg')
@@ -173,8 +173,8 @@ event7 = Event.create(title: "Aries Moon Circus presents... That Circus Show!",
     ",
     creator_id: user3.id,
     location: "The Colonial Theatre",
-    ticket_price: 35.00)
-    # date: "Sat, April 23, 2022")
+    ticket_price: 35.00,
+    date: "Sat, April 23, 2022")
 
     file7 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/circus.jpeg')
     event7.photo.attach(io: file7, filename: 'circus.jpeg')
@@ -191,8 +191,8 @@ event8 = Event.create(title: "Muddy Princess Sacramento, CA",
     We have a Bag Drop ($5 on the day) where you can leave your stuff until you have completed the course. Parking will be $10 and VIP Parking is $20 (limited availability)",
     creator_id: user1.id,
     location: "Murieta Equestrian Center",
-    ticket_price: 49.00)
-    # date: "Sat, May 14, 2022")
+    ticket_price: 49.00,
+    date: "Sat, May 14, 2022")
 
     file8 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/muddy.jpeg')
     event8.photo.attach(io: file8, filename: 'muddy.jpeg')
@@ -216,8 +216,8 @@ event9 = Event.create(title: "Bass Therapy w/ Xhale Ghost & More!",
     - Good Music 🎶v",
     creator_id: user1.id,
     location: "The Colonial Theatre",
-    ticket_price: 17.00)
-    # date: "Fri, April 15, 2022")
+    ticket_price: 17.00,
+    date: "Fri, April 15, 2022")
 
     file9 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/bass.jpeg')
     event9.photo.attach(io: file9, filename: 'bass.jpeg')
@@ -230,8 +230,8 @@ event10 = Event.create(title: "Sacramento Vegan Food Festival Spring 2022",
     Lots more food vendors than before, more entrances and lots more entertainment. Also extending the hours due to popular demand. From 11am to 7pm . Giving you more time for food options and drinks. This festival is also now a biannual event with a Spring Edition and a Fall Edition. All 100% Plant-Based Food Event!! Get your tickets early and save. Limited time for Early Bird Price, so get your tickets early!! Children 12 & Under are Free!!",
     creator_id: user2.id,
     location: "Capitol Mall",
-    ticket_price: 15.00)
-    # date: "Sun, May 15, 2022")
+    ticket_price: 15.00,
+    date: "Sun, May 15, 2022")
 
     file10 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/vegan.jpeg')
     event10.photo.attach(io: file10, filename: 'vegan.jpeg')
@@ -264,8 +264,8 @@ event11 = Event.create(title: "Sunday Movie Matinees at the Guild",
     St. HOPE is a nonprofit community development organization whose mission is to revitalize Oak Park through Public Education and Economic Development. St. HOPE Public Schools is a free public charter school organization serving students in grades PreK-12 at PS7 Elementary and Middle School and Sacramento Charter High School.",
     creator_id: user3.id,
     location: "The Guild Theater",
-    ticket_price: 0.00)
-    # date: "Sun, April 3, 2022")
+    ticket_price: 0.00,
+    date: "Sun, April 3, 2022")
 
     file11 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/matinees.jpeg')
     event11.photo.attach(io: file11, filename: 'matinees.jpeg')
@@ -275,8 +275,8 @@ event12 = Event.create(title: "Brunch In The Park",
     Each attendee will be given a souvenir glass and an overall epic day of brunch and beverage sampling. Proceeds will benefit the 501c3 Chasten Gold Nonprofit, FEIN: 84-2404682.",
     creator_id: user1.id,
     location: "Franklin D. Roosevelt Park",
-    ticket_price: 75.00)
-    # date: "Sat, May 14, 2022")
+    ticket_price: 75.00,
+    date: "Sat, May 14, 2022")
 
     file12 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/brunch.jpeg')
     event12.photo.attach(io: file12, filename: 'brunch.jpeg')
@@ -292,8 +292,8 @@ event13 = Event.create(title: "Bradley Ranch Winery 3rd Annual Egg Drop! Elk Gro
     Free Parking - No refunds.",
     creator_id: user2.id,
     location: "Bradley Ranch Winery",
-    ticket_price: 25.00)
-    # date: "Sun, April 10, 2022")
+    ticket_price: 25.00,
+    date: "Sun, April 10, 2022")
 
     file13 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/bradley_ranch.jpeg')
     event13.photo.attach(io: file13, filename: 'bradley_ranch.jpeg')
@@ -315,8 +315,8 @@ event14 = Event.create(title: "BSMF: Girlfriend's Day Retreat",
     There are no refunds. In case of bad weather conditions, the event will be rescheduled and all ticket purchases will be honored.",
     creator_id: user3.id,
     location: "Prairie Spring Estates",
-    ticket_price: 45.00)
-    # date: "Sat, April 23, 2022")
+    ticket_price: 45.00,
+    date: "Sat, April 23, 2022")
 
     file14 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/girlfriends.jpeg')
     event14.photo.attach(io: file14, filename: 'girlfriends.jpeg')
@@ -326,8 +326,8 @@ event16 = Event.create(title: "Chicano Batman",
     details: "Los Angeles psych-soul four-piece Chicano Batman live at the Crest",
     creator_id: user2.id,
     location: "Crest Theatre",
-    ticket_price: 28.00)
-    # date: "Sat, April 23, 2022")
+    ticket_price: 28.00,
+    date: "Sat, April 23, 2022")
 
     file16 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/batman.jpeg')
     event16.photo.attach(io: file16, filename: 'batman.jpeg')
@@ -343,8 +343,8 @@ event17 = Event.create(title: "Old Sugar Mill Wedding Open House 2022",
     Food Trucks onsite",
     creator_id: user3.id,
     location: "Old Sugar Mill",
-    ticket_price: 0.00)
-    # date: "Sun, May 22, 2022")
+    ticket_price: 0.00,
+    date: "Sun, May 22, 2022")
 
     file17 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/wedding.jpg')
     event17.photo.attach(io: file17, filename: 'wedding.jpeg')
@@ -362,8 +362,8 @@ event18 = Event.create(title: "Trish's All White Birthday Party",
     creator_id: user1.id,
     location: "1107 Firehouse Alley
     Sacramento, CA 95814",
-    ticket_price: 30.00)
-    # date: "Sat, May 14, 2022")
+    ticket_price: 30.00,
+    date: "Sat, May 14, 2022")
 
     file18 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/trish.jpeg')
     event18.photo.attach(io: file18, filename: 'trish.jpeg')
@@ -374,8 +374,8 @@ event19 = Event.create(title: "Sunday Morning Vibes",
     Every Sunday morning from 10am-11am we'll interview an artist in front of a live crowd of twenty people. From 12pm-2pm the audience will enjoy an intimate performance by our featured artist of the week. The audience can enjoy the wonderful taste of fresh brewed coffee / tea from some of your local hot spots while listening to the sweet sound of music and getting to know some of the dopest artists our city has to offer. Start your Sundays with the right vibe.",
     creator_id: user2.id,
     location: "3400 Broadway",
-    ticket_price: 10.00)
-    # date: "Sun, April 23, 2022")
+    ticket_price: 10.00,
+    date: "Sun, April 23, 2022")
 
     file19 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/vibes.jpeg')
     event19.photo.attach(io: file19, filename: 'vibes.jpeg')
@@ -386,8 +386,8 @@ event20 = Event.create(title: "Delta High School - Disney's Lion King Jr.",
     The African savannah comes to life in Disney's The Lion King Jr. Follow Simba and an unforgettable cast of characters in the journey from Pride Rock to the jungle... and back again, in this inspiring, coming-of-age tale.",
     creator_id: user3.id,
     location: "Clarksburg Middle School Auditorium",
-    ticket_price: 10.00)
-    # date: "Thu, March 31, 2022")
+    ticket_price: 10.00,
+    date: "Thu, March 31, 2022")
 
     file20 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/delta.jpeg')
     event20.photo.attach(io: file20, filename: 'delta.jpeg')
@@ -406,8 +406,8 @@ event21 = Event.create(title: "Girls Night Out",
     Who’s coming?",
     creator_id: user3.id,
     location: "Liaison Lounge",
-    ticket_price: 0.00)
-    # date: "Thu, March 31, 2022")
+    ticket_price: 0.00,
+    date: "Thu, March 31, 2022")
 
     file21 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/gno.jpeg')
     event21.photo.attach(io: file21, filename: 'gno.jpeg')
@@ -416,8 +416,8 @@ event22 = Event.create(title: "SacJobs Spring Career Fair",
     details: "Whether you're unemployed or simply looking to make a career change, you will have the opportunity to network, learn the skills needed to land your dream job, or even get hired on the spot!",
     creator_id: user1.id,
     location: "Lions Gate Hotel",
-    ticket_price: 0.00)
-    # date: "Thu, March 31, 2022")
+    ticket_price: 0.00,
+    date: "Thu, March 31, 2022")
 
     file22 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/sacjobs.png')
     event22.photo.attach(io: file22, filename: 'sacjobs.png')
