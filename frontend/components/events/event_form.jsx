@@ -23,6 +23,7 @@ class EventForm extends React.Component {
     handleSubmit(e){
         e.preventDefault();
         const formData = new FormData();
+        formData.append('event[id]', this.state.id);
         formData.append('event[title]', this.state.title);
         formData.append('event[details]', this.state.details);
         formData.append('event[creator_id]', this.state.creator_id);
@@ -31,6 +32,8 @@ class EventForm extends React.Component {
         formData.append('event[date]', this.state.date);
         formData.append('event[photo]', this.state.photoUrl);
 
+        console.log(this.state.id)
+        console.log(formData)
         this.props.submitEvent(formData).then( response => {
             if (this.props.formType === 'Create an event') {
                 this.props.history.push(`/`);
@@ -42,7 +45,6 @@ class EventForm extends React.Component {
     }
 
     render() {
-        console.log(this.state);
         if (!this.props.event) return null;
         return (
             <div className="events-container">

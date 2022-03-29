@@ -38,7 +38,8 @@ class Api::EventsController < ApplicationController
     end
 
     def update 
-        @event = Event.find(params[:id])
+        # debugger
+        @event = Event.find(params[:event][:id])
         if @event.update(event_params)
             render "api/events/show"
         else
