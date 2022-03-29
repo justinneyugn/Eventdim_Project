@@ -7,6 +7,7 @@ class EventForm extends React.Component {
         this.state = this.props.event;
         this.update = this.update.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleFile = this.handleFile.bind(this);
     }
 
     update(field) {
@@ -15,29 +16,20 @@ class EventForm extends React.Component {
         }
     }
 
+    handleFile(e) {
+        this.setState({photoUrl: e.currentTarget.files[0]})
+    }
+
     handleSubmit(e){
         e.preventDefault();
         const formData = new FormData();
         formData.append('event[title]', this.state.title);
         formData.append('event[details]', this.state.details);
+        formData.append('event[creator_id]', this.state.creator_id);
         formData.append('event[location]', this.state.location);
         formData.append('event[ticket_price]', this.state.ticket_price);
         formData.append('event[date]', this.state.date);
         formData.append('event[photo]', this.state.photoUrl);
-        // $.ajax({
-        //     url: `api/events`,
-        //     method: `POST`,
-        //     data: formData,
-        //     contentType: false,
-        //     processData: false
-        // }).then( response => {
-        //     if (this.props.formType === 'Create an event') {
-        //         this.props.history.push(`/`);
-        //     } 
-        //     else {
-        //         this.props.history.push(`/events/${this.state.id}`)
-        //     };
-        // })
 
         this.props.submitEvent(formData).then( response => {
             if (this.props.formType === 'Create an event') {
@@ -50,7 +42,7 @@ class EventForm extends React.Component {
     }
 
     render() {
-        
+        console.log(this.state);
         if (!this.props.event) return null;
         return (
             <div className="events-container">
@@ -103,7 +95,7 @@ class EventForm extends React.Component {
                     <br />
                     <input 
                         type="file" 
-                        onChange={this.update('photoUrl')}/>
+                        onChange={this.handleFile}/>
                     <br />
                     <button type='submit'>{this.props.formType}</button>
                 </form>

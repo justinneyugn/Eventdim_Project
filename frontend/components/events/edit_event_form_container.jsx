@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { requestEvent, updateEvent } from '../../actions/event_actions';
 import EventForm from './event_form';
-// import {withRouter} from 'react-router-dom'
 
 class EditEventForm extends React.Component {
 
