@@ -46,11 +46,6 @@ class EventForm extends React.Component {
 
     render() {
         if (!this.props.event) return null;
-        const display = (
-            <div>
-                <Link className="btn" to="/signin">Sign In</Link>
-            </div>
-        );
         return (
             <div className="form-container">
                 <header className="nav-bar">
@@ -66,17 +61,19 @@ class EventForm extends React.Component {
                     <div className='form-info'>
                         <div className='form-basic-info'>
                             <div className='form-info-heading'>
-                                <h2>Basic info</h2>
+                                <h2>Basic Info</h2>
                             </div>
                             <div className='form-info-description'>
                                 <p>Name your event and tell event-goers why they should come. Add details that highlight what makes it unique.</p>
                             </div>
                             <div className='form-info-input'>
-                                <label>Event Title</label>
+                                <label className='form-label'>Event Title</label>
                                 <input
+                                    className='form-input'
                                     type="text"
                                     onChange={this.update('title')}
                                     value={this.state.title}
+                                    placeholder="Be clear and descriptive"
                                 />
                             </div>
                         </div>
@@ -88,8 +85,9 @@ class EventForm extends React.Component {
                                 <p>Help people in the area discover your event and let attendees know where to show up.</p>
                             </div>
                             <div className='form-info-input'>
-                                <label>Event Location</label>
+                                <label className='form-label'>Event Location</label>
                                 <input
+                                    className='form-input'
                                     type="text"
                                     onChange={this.update('location')}
                                     value={this.state.location}
@@ -104,8 +102,9 @@ class EventForm extends React.Component {
                                 <p>Tell event-goers when your event starts and ends so they can make plans to attend.</p>
                             </div>
                             <div className='form-info-input'>
-                                <label>Event Date</label>
+                                <label className='form-label'>Event Date</label>
                                 <input
+                                    className='form-input'
                                     type="text"
                                     onChange={this.update('date')}
                                     value={this.state.date}
@@ -119,11 +118,14 @@ class EventForm extends React.Component {
                             <div className='form-info-description'>
                                 <p>This is the first image attendees will see at the top of your listing. Use a high quality image: 2160x1080px (2:1 ratio).</p>
                             </div>
-                            <div className='form-info-input'>
-                                <input 
-                                    type="file" 
-                                    onChange={this.handleFile}
-                                />
+                            <div className='custom-image'>
+                                <label className="custom-file-upload">
+                                    <input 
+                                        type="file" 
+                                        onChange={this.handleFile}
+                                    />
+                                    Click to add main event image.
+                                </label>
                             </div>
                         </div>
                         <div className='form-description'>
@@ -134,11 +136,13 @@ class EventForm extends React.Component {
                                 <p>Add more details to your event like your schedule, sponsors, or featured guests.</p>
                             </div>
                             <div className='form-info-input'>
-                                <label>Summary</label>
+                                <label className='form-label'>Summary</label>
                                 <textarea
+                                    className='form-input'
                                     type="text"
-                                    value="Write a short event summary to get attendees excited"
+                                    placeholder="Write a short event summary to get attendees excited"
                                     onChange={this.update('details')}
+                                    value={this.state.details}
                                 />
                             </div>
                         </div>
@@ -146,16 +150,20 @@ class EventForm extends React.Component {
                             <div className='form-info-heading'>
                                 <h2>Ticket Price</h2>
                             </div>
+                            <div className='form-info-description'>
+                                <p></p>
+                            </div>
                             <div className='form-info-input'>
-                                <label>Ticket Price</label>
+                                <label className='form-label'>Ticket Price</label>
                                 <input
+                                    className='form-input'
                                     type="number"
                                     onChange={this.update('ticket_price')}
                                     value={this.state.ticket_price}
                                 />
                             </div>
                         </div>
-                        <button type='submit'>Publish</button>
+                        <button className='form-button' type='submit'>Publish</button>
                     </div>
                 </form>
             </div>

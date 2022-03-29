@@ -13,3 +13,148 @@
     cursor: pointer;
 }
 
+.form-info-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-info {
+    display: flex;
+    // border: 1px solid gray;
+    flex-direction: column;
+    padding: 0 150px;
+}
+
+.form-basic-info {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid lightgray;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 30px;
+
+}
+
+.form-location {
+    padding-top: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid lightgray;
+}
+
+.form-date {
+    padding-top: 50px;
+    padding-left: 150px;
+    padding-bottom: 30px;
+    padding-right: 150px;
+    border-bottom: 1px solid lightgray;
+}
+
+.form-image {
+    padding-top: 50px;
+    padding-left: 150px;
+    padding-bottom: 30px;
+    padding-right: 150px;
+    border-bottom: 1px solid lightgray;
+}
+
+.form-description {
+    padding-top: 50px;
+    padding-left: 150px;
+    padding-bottom: 30px;
+    padding-right: 150px;
+    border-bottom: 1px solid lightgray;
+}
+
+.form-ticket-price {
+    padding-top: 50px;
+    padding-left: 150px;
+    padding-bottom: 30px;
+    padding-right: 150px;
+    border-bottom: 1px solid lightgray;
+}
+
+.form-info-heading {
+    color: #1E0A3C;
+    font-size: 30px;
+}
+
+.form-info-description {
+    color: #39364F;
+    font-size: 14px;
+    margin-top: 7px;
+    margin-bottom: 20px;
+}
+
+.form-info-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    border: 1px solid lightgray;
+    padding: 10px;
+}
+
+.form-label {
+    color: #6f7287;
+    font-size: 12px;
+}
+
+.form-input {
+    border: none;
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    border: 1px solid lightgray;
+    padding: 10px;
+    background-color: #F8F8F8;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.custom-image:hover {
+    border: 1px solid white;
+    box-shadow: 2px 2px 5px lightgray, -2px -2px 5px lightgray;
+    transition: all .4s cubic-bezier(.4,0,.3,1);
+    
+}
+
+.custom-file-upload {
+    color: #1E0A3C;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.form-button {
+    flex: 1;
+    background-color: #D1410C;
+    color: #FFFFFF;
+    display: block;
+    width: 11%;
+    border: none;
+    padding: 14px 28px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    transition: all .4s cubic-bezier(.4,0,.3,1);
+    align-self: flex-end;
+    margin: 20px 0;
+}
+
+.form-button:hover{
+    background-color: #FA5F55;
+}
