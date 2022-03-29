@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class EventForm extends React.Component {
     constructor(props){
@@ -46,60 +46,117 @@ class EventForm extends React.Component {
 
     render() {
         if (!this.props.event) return null;
+        const display = (
+            <div>
+                <Link className="btn" to="/signin">Sign In</Link>
+            </div>
+        );
         return (
-            <div className="events-container">
-                <nav className="events-navbar">
-                    <div className="events-nav-container">
-                        <Link to='/' className='website_name events-logo'>eventdim</Link>
-                        <ul className="events-ul">
-                            <li>
-                                <Link to='/'>{this.props.currentUser.email}</Link>
-                            </li>
+            <div className="form-container">
+                <header className="nav-bar">
+                    <Link to='/' className='website_name'>eventdim</Link>
+                    <nav>
+                        <ul className='nav_links'>
+                            <li><div className='btn'>{this.props.currentUser.email}</div></li>
+                            <li><button className="btn create form-logout" onClick={this.props.logout}>Log Out</button></li>
                         </ul>
+                    </nav>
+                </header>
+                <form className="form-info-container" onSubmit={this.handleSubmit}>
+                    <div className='form-info'>
+                        <div className='form-basic-info'>
+                            <div className='form-info-heading'>
+                                <h2>Basic info</h2>
+                            </div>
+                            <div className='form-info-description'>
+                                <p>Name your event and tell event-goers why they should come. Add details that highlight what makes it unique.</p>
+                            </div>
+                            <div className='form-info-input'>
+                                <label>Event Title</label>
+                                <input
+                                    type="text"
+                                    onChange={this.update('title')}
+                                    value={this.state.title}
+                                />
+                            </div>
+                        </div>
+                        <div className='form-location'>
+                            <div className='form-info-heading'>
+                                <h2>Location</h2>
+                            </div>
+                            <div className='form-info-description'>
+                                <p>Help people in the area discover your event and let attendees know where to show up.</p>
+                            </div>
+                            <div className='form-info-input'>
+                                <label>Event Location</label>
+                                <input
+                                    type="text"
+                                    onChange={this.update('location')}
+                                    value={this.state.location}
+                                />
+                            </div>
+                        </div>
+                        <div className='form-date'>
+                            <div className='form-info-heading'>
+                                <h2>Date</h2>
+                            </div>
+                            <div className='form-info-description'>
+                                <p>Tell event-goers when your event starts and ends so they can make plans to attend.</p>
+                            </div>
+                            <div className='form-info-input'>
+                                <label>Event Date</label>
+                                <input
+                                    type="text"
+                                    onChange={this.update('date')}
+                                    value={this.state.date}
+                                />
+                            </div>
+                        </div>
+                        <div className='form-image'>
+                            <div className='form-info-heading'>
+                                <h2>Main Event Image</h2>
+                            </div>
+                            <div className='form-info-description'>
+                                <p>This is the first image attendees will see at the top of your listing. Use a high quality image: 2160x1080px (2:1 ratio).</p>
+                            </div>
+                            <div className='form-info-input'>
+                                <input 
+                                    type="file" 
+                                    onChange={this.handleFile}
+                                />
+                            </div>
+                        </div>
+                        <div className='form-description'>
+                            <div className='form-info-heading'>
+                                <h2>Description</h2>
+                            </div>
+                            <div className='form-info-description'>
+                                <p>Add more details to your event like your schedule, sponsors, or featured guests.</p>
+                            </div>
+                            <div className='form-info-input'>
+                                <label>Summary</label>
+                                <textarea
+                                    type="text"
+                                    value="Write a short event summary to get attendees excited"
+                                    onChange={this.update('details')}
+                                />
+                            </div>
+                        </div>
+                        <div className='form-ticket-price'>
+                            <div className='form-info-heading'>
+                                <h2>Ticket Price</h2>
+                            </div>
+                            <div className='form-info-input'>
+                                <label>Ticket Price</label>
+                                <input
+                                    type="number"
+                                    onChange={this.update('ticket_price')}
+                                    value={this.state.ticket_price}
+                                />
+                            </div>
+                        </div>
+                        <button type='submit'>Publish</button>
                     </div>
-                </nav>
-                <h1>{this.props.formType}</h1>
-                <form onSubmit={this.handleSubmit}>
-                    <label>Title</label>
-                    <input
-                        type="text"
-                        onChange={this.update('title')}
-                        value={this.state.title}
-                    />
-                    <br />
-                    <label>Details</label>
-                    <textarea
-                        type="text"
-                        value={this.state.details}
-                        onChange={this.update('details')}
-                    />
-                    <br />
-                    <label>Location</label>
-                    <input
-                        type="text"
-                        onChange={this.update('location')}
-                        value={this.state.location}
-                    />
-                    <br />
-                    <label>Ticket Price</label>
-                    <input
-                        type="number"
-                        onChange={this.update('ticket_price')}
-                        value={this.state.ticket_price}
-                    />
-                    <br />
-                    <label>Date</label>
-                    <input
-                        type="text"
-                        onChange={this.update('date')}
-                        value={this.state.date}
-                    />
-                    <br />
-                    <input 
-                        type="file" 
-                        onChange={this.handleFile}/>
-                    <br />
-                    <button type='submit'>{this.props.formType}</button>
                 </form>
             </div>
         )

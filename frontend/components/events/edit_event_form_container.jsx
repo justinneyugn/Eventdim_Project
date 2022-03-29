@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { requestEvent, updateEvent } from '../../actions/event_actions';
+import { logout } from '../../actions/session_actions';
 import EventForm from './event_form';
 
 class EditEventForm extends React.Component {
@@ -10,7 +11,7 @@ class EditEventForm extends React.Component {
     }
     
     render () {
-        const { event, formType, submitEvent, history, currentUser, photoUrl } = this.props;
+        const { event, formType, submitEvent, history, currentUser, photoUrl, logout } = this.props;
 
         if (!event) return null;
         return (
@@ -20,7 +21,8 @@ class EditEventForm extends React.Component {
                 submitEvent={submitEvent}
                 currentUser={currentUser}
                 photoUrl={photoUrl}
-                history={history} />
+                history={history}
+                logout={logout} />
         );
     }
 }
@@ -36,7 +38,8 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => {
     return ({
         submitEvent: event => dispatch(updateEvent(event)),
-        requestEvent: eventId => dispatch(requestEvent(eventId))
+        requestEvent: eventId => dispatch(requestEvent(eventId)),
+        logout: () => dispatch(logout())
     });
 };
 

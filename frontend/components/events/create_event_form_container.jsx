@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { createEvent } from '../../actions/event_actions';
+import { logout } from '../../actions/session_actions';
 import EventForm from './event_form';
 
 const mSTP = state => {
@@ -12,7 +13,8 @@ const mSTP = state => {
 
 const mDTP = dispatch => {
     return ({
-        submitEvent: event => dispatch(createEvent(event))
+        submitEvent: event => dispatch(createEvent(event)),
+        logout: () => dispatch(logout())
     });
 };
 
