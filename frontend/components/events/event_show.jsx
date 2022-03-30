@@ -12,10 +12,16 @@ class EventShow extends React.Component {
 
     render() {
         if (!this.props.event) return null;
+        const user = this.props.currentUser ? (
+            <div>
+                <div className='btn'>{this.props.currentUser.email}</div>
+            </div>
+        ) : (
+            <div></div>
+        );
         const display = this.props.currentUser ? (
             <div>
-                <p>Hello, {this.props.currentUser.email}</p>
-                <button onClick={this.props.logout}>Log Out</button>
+                <button className="btn create form-logout" onClick={this.props.logout}>Log Out</button>
             </div>
         ) : (
             <div>
@@ -28,6 +34,7 @@ class EventShow extends React.Component {
                     <Link to='/' className='website_name'>eventdim</Link>
                     <nav>
                         <ul className="nav_links">
+                            <li>{user}</li>
                             <li><Link className="btn create" to='/new'>Create an event</Link></li>
                             <li>{display}</li>
                         </ul>

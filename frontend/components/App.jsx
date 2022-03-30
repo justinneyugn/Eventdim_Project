@@ -16,7 +16,7 @@ const App = () => (
         <ProtectedRoute exact path="/new" component={CreateEventFormContainer} />
         <ProtectedRoute exact path="/events/:eventId/edit" component={EditEventFormContainer} />
 
-        <Route path="/events/:eventId" component={EventShowContainer} />
+        <Route exact path="/events/:eventId" component={EventShowContainer} />
 
         {/* these are only seen if you are logged out */}
         <AuthRoute exact path="/signin" component={LoginFormContainer} />

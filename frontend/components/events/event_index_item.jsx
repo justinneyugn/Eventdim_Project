@@ -20,9 +20,9 @@ class EventIndexItem extends React.Component {
             if (this.props.currentUser) {
                 return (
                     <div>
-                        <Link to={`/events/${this.props.event.id}/edit`}>Edit</Link>
+                        <Link className="event-edit" to={`/events/${this.props.event.id}/edit`}>Edit</Link>
                         <br />
-                        <button onClick={this.afterDelete}>
+                        <button className="event-delete" onClick={this.afterDelete}>
                             Delete
                         </button>
                     </div>
@@ -40,13 +40,18 @@ class EventIndexItem extends React.Component {
                             <div className="event-title">
                                 <h3>{this.props.event.title}</h3>
                             </div>
+                            <div className="event-date">
+                                <p>{this.props.event.date}</p>
+                            </div>
                             <div className="event-location">
-                                <h5>{this.props.event.location}</h5>
+                                <p>{this.props.event.location}</p>
                             </div>
                             <div className="event-ticket-price">
-                                <h5>Starts at ${this.props.event.ticket_price}</h5>
+                                <p>Starts at ${this.props.event.ticket_price}</p>
                             </div>
-                            {editDelete()}
+                            <div className="event-edit-delete"> 
+                                {editDelete()}
+                            </div>
                         </div>
                     </div>
                 </Link>

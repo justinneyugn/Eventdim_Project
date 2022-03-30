@@ -2,10 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default ({ currentUser, logout }) => {
+    const user = currentUser ? (
+        <div>
+            <div className='btn'>{currentUser.email}</div>
+        </div>
+    ) : (
+        <div></div>
+    );
+
     const display = currentUser ? (
         <div>
-            <p>Hello, {currentUser.email}</p>
-            <button onClick={logout}>Log Out</button>
+            {/* <div className='btn'>{currentUser.email}</div> */}
+            <button className="btn create form-logout" onClick={logout}>Log Out</button>
         </div>
     ) : (
         <div>
@@ -18,6 +26,7 @@ export default ({ currentUser, logout }) => {
         <Link to='/' className='website_name'>eventdim</Link>
         <nav>
             <ul className="nav_links">
+                <li>{user}</li>
                 <li><Link className="btn create" to='/new'>Create an event</Link></li>
                 <li>{display}</li>
             </ul>
