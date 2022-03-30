@@ -47,20 +47,6 @@ event1 = Event.create(title: "Mix + Mingle - Sacramento's Largest Free Business 
     file1 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/mix_and_mingle.jpeg')
     event1.photo.attach(io: file1, filename: 'mix_and_mingle.jpg')
 
-event2 = Event.create(title: "Loud Festival",
-    details: "Loud Festival is a three-day event, held at Cesar Chavez Park. This inaugural year, the festival will be headlined 
-    by one of the most famous rappers in the game, Rick Ross. This was no small feat for a new, relatively small music festival.
-    Performances take place on over three days by local, Regional and national acts. There will be appearances by television 
-    personalities as well as household name comedians. These personalities will serve as co-host for the festival along with the 
-    on-air radio disc jocks from 102.5 KSFM.",
-    creator_id: user1.id,
-    location: "Cesar Chavez Plaza",
-    ticket_price: 65.00,
-    date: "Sun, April 24, 2022")
-
-    file2 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/loud_festival.jpeg')
-    event2.photo.attach(io: file2, filename: 'loud_festival.jpeg')
-
 event3 = Event.create(title: "Sacramento Grilled Cheese Festival 2022",
     details: "The Sacramento Grilled Cheese Festival is a full weekend of events dedicated to the one food you never out grow.... GRILLED CHEESE! We've paired our grilled cheese with everything from craft beer to bounce houses so we've got something for everyone.
 
@@ -108,37 +94,6 @@ event4 = Event.create(title: "Self Care Sundays | Season 3 Opener at the Old Sug
 
     file4 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/self_care.jpeg')
     event4.photo.attach(io: file4, filename: 'self_care.jpeg')
-
-event5 = Event.create(title: "Margarita Fest",
-    details: "Come Celebrate Cinco de Mayo with us at the Margarita Fest!
-    When:
-    Saturday, April 30th & Sunday, May 1st
-    Performances by:
-    Saturday, April 30th
-    Lighter Shade of Brown, Mellowman Ace, Natalie La Rose, Marcos Hernandez, Midnight Players, Midtown Soul and more!
-    Sunday, May 1st
-    Malo, Delfonics featuring Greg Hill, Maya Band and so much more!
-    Where:
-    Cesar Chavez Park -910 I Street, Sacramento, Ca
-    Time:
-    Saturday - 12noon - 8:00pm
-    Sunday - 11:00am - 7:00pm
-    Tickets:
-    VIP $60.00 one seat in section in front of stage
-    General Admission March - $20.00
-    General Admission April - $25.00
-    General Admission May $30.00
-    General Admission Door Price - $35.00
-    Kids 12 & under FREE
-    *** Tickets are non refundable.***",
-    creator_id: user2.id,
-    location: "Cesar Chavez Plaza",
-    ticket_price: 60.00,
-    date: "Starting Sat, April 30")
-
-    file5 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/margarita.jpeg')
-    event5.photo.attach(io: file5, filename: 'margarita.jpeg')
-
 
 event6 = Event.create(title: "Celebrating The Life of Deacon Dr. Timothy D. Poston, Sr.",
     details: "Celebration Musical:
@@ -392,6 +347,61 @@ event20 = Event.create(title: "Delta High School - Disney's Lion King Jr.",
     file20 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/delta.jpeg')
     event20.photo.attach(io: file20, filename: 'delta.jpeg')
 
+event22 = Event.create(title: "SacJobs Spring Career Fair",
+    details: "Whether you're unemployed or simply looking to make a career change, you will have the opportunity to network, learn the skills needed to land your dream job, or even get hired on the spot!",
+    creator_id: user1.id,
+    location: "Lions Gate Hotel",
+    ticket_price: 0.00,
+    date: "Thu, March 31, 2022")
+
+    file22 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/sacjobs.png')
+    event22.photo.attach(io: file22, filename: 'sacjobs.png')
+
+event2 = Event.create(title: "Loud Festival",
+    details: "Loud Festival is a three-day event, held at Cesar Chavez Park. This inaugural year, the festival will be headlined 
+    by one of the most famous rappers in the game, Rick Ross. This was no small feat for a new, relatively small music festival.
+    Performances take place on over three days by local, Regional and national acts. There will be appearances by television 
+    personalities as well as household name comedians. These personalities will serve as co-host for the festival along with the 
+    on-air radio disc jocks from 102.5 KSFM.",
+    creator_id: user1.id,
+    location: "Cesar Chavez Plaza",
+    ticket_price: 65.00,
+    date: "Sun, April 24, 2022")
+
+    file2 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/loud_festival.jpeg')
+    event2.photo.attach(io: file2, filename: 'loud_festival.jpeg')
+
+
+event5 = Event.create(title: "Margarita Fest",
+    details: "Come Celebrate Cinco de Mayo with us at the Margarita Fest!
+    When:
+    Saturday, April 30th & Sunday, May 1st
+    Performances by:
+    Saturday, April 30th
+    Lighter Shade of Brown, Mellowman Ace, Natalie La Rose, Marcos Hernandez, Midnight Players, Midtown Soul and more!
+    Sunday, May 1st
+    Malo, Delfonics featuring Greg Hill, Maya Band and so much more!
+    Where:
+    Cesar Chavez Park -910 I Street, Sacramento, Ca
+    Time:
+    Saturday - 12noon - 8:00pm
+    Sunday - 11:00am - 7:00pm
+    Tickets:
+    VIP $60.00 one seat in section in front of stage
+    General Admission March - $20.00
+    General Admission April - $25.00
+    General Admission May $30.00
+    General Admission Door Price - $35.00
+    Kids 12 & under FREE
+    *** Tickets are non refundable.***",
+    creator_id: user2.id,
+    location: "Cesar Chavez Plaza",
+    ticket_price: 60.00,
+    date: "Starting Sat, April 30")
+
+    file5 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/margarita.jpeg')
+    event5.photo.attach(io: file5, filename: 'margarita.jpeg')
+
 event21 = Event.create(title: "Girls Night Out",
     details: "The all new #GirlsNightOut #GNO
 
@@ -411,17 +421,3 @@ event21 = Event.create(title: "Girls Night Out",
 
     file21 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/gno.jpeg')
     event21.photo.attach(io: file21, filename: 'gno.jpeg')
-
-event22 = Event.create(title: "SacJobs Spring Career Fair",
-    details: "Whether you're unemployed or simply looking to make a career change, you will have the opportunity to network, learn the skills needed to land your dream job, or even get hired on the spot!",
-    creator_id: user1.id,
-    location: "Lions Gate Hotel",
-    ticket_price: 0.00,
-    date: "Thu, March 31, 2022")
-
-    file22 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/sacjobs.png')
-    event22.photo.attach(io: file22, filename: 'sacjobs.png')
-
-
-
-
