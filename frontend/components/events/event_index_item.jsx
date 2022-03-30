@@ -17,7 +17,7 @@ class EventIndexItem extends React.Component {
         // if (!this.props.event) return null;
 
         const editDelete = () => {
-            if (this.props.currentUser) {
+            if (this.props.currentUser && this.props.currentUser.id === this.props.event.creator_id) {
                 return (
                     <div>
                         <Link className="event-edit" to={`/events/${this.props.event.id}/edit`}>Edit</Link>

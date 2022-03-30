@@ -5,14 +5,15 @@
 }
 
 .event-item-container:hover {
-    box-shadow: 2px 2px 5px lightgray, -2px -2px 5px lightgray;
+    box-shadow: 2px 2px 5px gray, -2px -2px 5px gray;
 }
 
 .event-item {
-    border: 1px solid gray;
     display: flex;
     flex-direction: column;
     text-decoration: none;
+    box-shadow: 2px 2px 5px lightgray, -2px -2px 5px lightgray;
+
 
 }
 .event-item-bottom-container {

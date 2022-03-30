@@ -12,7 +12,6 @@ export default ({ currentUser, logout }) => {
 
     const display = currentUser ? (
         <div>
-            {/* <div className='btn'>{currentUser.email}</div> */}
             <button className="btn create form-logout" onClick={logout}>Log Out</button>
         </div>
     ) : (

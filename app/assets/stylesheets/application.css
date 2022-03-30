@@ -59,6 +59,10 @@ header {
     font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
 }
 
+.btn:hover {
+    filter: contrast(50%);
+}
+
 .create {
     color: #3D64FF;
 }
