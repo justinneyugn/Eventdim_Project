@@ -45,7 +45,13 @@ class EventForm extends React.Component {
     }
 
     render() {
+        debugger
         if (!this.props.event) return null;
+        const img = this.state.photoUrl ? (
+            <div className='img'>Image uploaded</div>
+        ) : (
+            <div className='img'></div>
+        )
         return (
             <div className="form-container">
                 <header className="nav-bar">
@@ -126,6 +132,7 @@ class EventForm extends React.Component {
                                     />
                                     Click to add main event image.
                                 </label>
+                                {img}
                             </div>
                         </div>
                         <div className='form-description'>

@@ -66,17 +66,10 @@
 .home-events {
     display: grid;
     grid-template-columns: repeat(3, 10fr);
-    gap: 10px;
+    gap: 75px 0px;
 }
 
 .home-events:nth-child(3n+1) {
     margin-left: 300px;
 }
 
-.home-events:nth-child(3n+2) {
-    // padding-right: 200px;
-}
-
-.home-events:nth-child(3n+3) {
-    // padding-right: 500px;
-}

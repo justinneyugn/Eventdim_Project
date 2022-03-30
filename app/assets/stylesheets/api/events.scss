@@ -20,7 +20,6 @@
 
 .form-info {
     display: flex;
-    // border: 1px solid gray;
     flex-direction: column;
     padding: 0 150px;
 }
@@ -112,17 +111,18 @@ input::-webkit-inner-spin-button {
 }
 
 input[type="file"] {
-    // display: none;
     opacity: 0;
     position: absolute;
     height: 0;
     width: 0;
-    z-index: -1;
+    z-index: 1;
     overflow: hidden;
 }
 
 .custom-image {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     margin-bottom: 50px;
     border: 1px solid lightgray;
@@ -131,7 +131,16 @@ input[type="file"] {
     padding-top: 70px;
     padding-bottom: 70px;
     background-repeat: no-repeat;
-  background-size: contain;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    color: #1E0A3C;
+    font-size: 14px;
+    margin-top: 25px;
 }
 
 .custom-image:hover {
