@@ -11,6 +11,7 @@
 #  location     :string           not null
 #  ticket_price :float            not null
 #  date         :string           not null
+#  category     :string
 #
 class Event < ApplicationRecord
     validates :title, :details, :location, :ticket_price, :date, presence:true
