@@ -8,6 +8,10 @@ import EventIndexContainer from './events/event_index_container';
 import EventShowContainer from './events/event_show_container';
 import EditEventFormContainer from './events/edit_event_form_container';
 import CreateEventFormContainer from './events/create_event_form_container';
+import FoodContainer from "./events/food/food_container";
+import SocialContainer from "./events/social/social_container";
+import EntertainmentContainer from "./events/entertainment/entertainment_container";
+import OtherContainer from "./events/other/other_container";
 
 
 const App = () => (
@@ -24,6 +28,10 @@ const App = () => (
 
         <Route exact path="/" component={NavBarContainer} />
         <Route exact path="/" component={EventIndexContainer} />
+        <Route exact path="/food" component={FoodContainer} />
+        <Route exact path="/social" component={SocialContainer} />
+        <Route exact path="/entertainment" component={EntertainmentContainer} />
+        <Route exact path="/other" component={OtherContainer} />
     </div>
 );
 

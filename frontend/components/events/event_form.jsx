@@ -10,6 +10,10 @@ class EventForm extends React.Component {
         this.handleFile = this.handleFile.bind(this);
     }
 
+    componentDidMount(){
+        window.scrollTo(0,0);
+    }
+    
     update(field) {
         return(e) => {
             this.setState({ [field]: e.currentTarget.value })

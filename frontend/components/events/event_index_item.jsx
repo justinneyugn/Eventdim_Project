@@ -7,6 +7,10 @@ class EventIndexItem extends React.Component {
         this.afterDelete = this.afterDelete.bind(this);
     }
 
+    componentDidMount(){
+        window.scrollTo(0,0);
+    }
+    
     afterDelete(e) {
         e.preventDefault();
         this.props.deleteEvent(this.props.event.id).then( response => {

@@ -8,24 +8,8 @@ class EventIndex extends React.Component {
     }
 
     componentDidMount(){
+        // window.scrollTo(0,0)
         this.props.requestEvents();
-    }
-
-    handleCategory(field) {
-        this.props.events.map( (event, idx) => {
-            if (event.category === field) {
-                return ( 
-                    <EventIndexItem
-                    event={event}
-                    deleteEvent={this.props.deleteEvent}
-                    currentUser={this.props.currentUser}
-                    requestEvent={this.props.requestEvent}
-                    history={this.props.history}
-                    key={`event-${idx}`}
-                />
-                )
-            }
-        })
     }
 
     render(){
@@ -59,6 +43,13 @@ class EventIndex extends React.Component {
                                     risks at your event.
                                 </span>
                             </div>
+                        </div>
+                        <div>
+                            <Link to='/'>All</Link>
+                            <Link to='/food'>Food/Drinks</Link>
+                            <Link to='/social'>Social</Link>
+                            <Link to='/entertainment'>Entertainment</Link>
+                            <Link to='/other'>Other</Link>
                         </div>
                         <div className='home-browse-section'>
                             <div className='home-location-container'>

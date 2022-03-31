@@ -7,6 +7,7 @@ class EventShow extends React.Component {
     }
 
     componentDidMount() {
+        window.scrollTo(0,0);
         this.props.requestEvent(this.props.event.id);
     }
 
