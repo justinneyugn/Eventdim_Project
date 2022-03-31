@@ -153,7 +153,7 @@ event8 = Event.create(title: "Muddy Princess Sacramento, CA",
     location: "Murieta Equestrian Center",
     ticket_price: 49.00,
     date: "Sat, May 14, 2022",
-    category: "active")
+    category: "other")
 
     file8 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/muddy.jpeg')
     event8.photo.attach(io: file8, filename: 'muddy.jpeg')
