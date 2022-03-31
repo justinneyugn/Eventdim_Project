@@ -32,8 +32,6 @@ class EventForm extends React.Component {
         formData.append('event[date]', this.state.date);
         formData.append('event[photo]', this.state.photoUrl);
 
-        console.log(this.state.id)
-        console.log(formData)
         this.props.submitEvent(formData).then( response => {
             if (this.props.formType === 'Create an event') {
                 this.props.history.push(`/`);
@@ -45,13 +43,12 @@ class EventForm extends React.Component {
     }
 
     render() {
-        debugger
         if (!this.props.event) return null;
-        const img = this.state.photoUrl ? (
-            <div className='img'>Image uploaded</div>
-        ) : (
-            <div className='img'></div>
-        )
+        // const img = this.state.photoUrl ? (
+        //     <div className='img'>Image uploaded</div>
+        // ) : (
+        //     <div className='img'></div>
+        // )
         return (
             <div className="form-container">
                 <header className="nav-bar">
@@ -132,7 +129,7 @@ class EventForm extends React.Component {
                                     />
                                     Click to add main event image.
                                 </label>
-                                {img}
+                                {/* {img} */}
                             </div>
                         </div>
                         <div className='form-description'>
