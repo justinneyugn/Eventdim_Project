@@ -16,6 +16,7 @@ class EventForm extends React.Component {
         }
     }
 
+
     handleFile(e) {
         this.setState({photoUrl: e.currentTarget.files[0]})
     }
