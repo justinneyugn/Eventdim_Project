@@ -5,3 +5,9 @@ Eventdim is an event management site that allows users to browse and create loca
 
 The live site can be found 
 [here](https://eventdim.herokuapp.com/#/).
+
+## Technologies Used
+
+* Ruby on Rails
+   * This serves as the backend framework to hold the data tables for the Users and Events
+   * It handles the creating, updating, and destroying of user and event instances while rendering JSON objects to continue with the Redux cycle.
