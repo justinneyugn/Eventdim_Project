@@ -14,6 +14,8 @@ class SessionForm extends React.Component {
         this.updatePassword = this.updatePassword.bind(this);
         this.link = this.link.bind(this);
         this.errors = this.errors.bind(this);
+        this.handleDemo = this.handleDemo.bind(this);
+
     }
 
     componentDidMount() {
@@ -38,6 +40,15 @@ class SessionForm extends React.Component {
 
     updatePassword(e){
         this.setState({password: e.target.value})
+    }
+
+    handleDemo(e) {
+        e.preventDefault();
+        const demoUser = {
+            email: "test@gmail.com",
+            password: "testtest"
+        };
+        this.props.processForm(demoUser);
     }
 
     link() {
@@ -70,6 +81,13 @@ class SessionForm extends React.Component {
     }
 
     render() {
+        const demo = () => {
+            if (this.props.formType === 'Log in') {
+                return (
+                    <button className= "session-button demo" onClick={this.handleDemo}>Demo User</button>
+                )
+            }
+        }
         return (
             <div className="session-container">
                 <div className="session-inner">
@@ -105,6 +123,7 @@ class SessionForm extends React.Component {
                         <br />
                         <button className= "session-button" type="submit">{this.props.formType}</button>
                     </form>
+                    {demo()}
                     <br />
                     <div className="line-and-oval">
                         <hr></hr>
