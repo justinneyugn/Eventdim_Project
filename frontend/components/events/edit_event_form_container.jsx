@@ -11,7 +11,6 @@ class EditEventForm extends React.Component {
     }
     
     render () {
-        debugger
         const { event, formType, submitEvent, history, currentUser, photoUrl, logout } = this.props;
 
         if (!event) return null;
