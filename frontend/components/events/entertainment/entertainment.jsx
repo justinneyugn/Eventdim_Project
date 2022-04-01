@@ -57,12 +57,14 @@ class Entertainment extends React.Component {
                                     </span>
                                 </div>
                             </div>
-                            <div>
-                                <Link to='/'>All</Link>
-                                <Link to='/food'>Food/Drinks</Link>
-                                <Link to='/social'>Social</Link>
-                                <Link to='/entertainment'>Entertainment</Link>
-                                <Link to='/other'>Other</Link>
+                            <div className='category-links-container'>
+                                <div className='category-links'>
+                                    <div className='first-link'><Link className='single-link' to='/'>All</Link></div>
+                                    <div className='other-link'><Link className='single-link' to='/food'>Food/Drinks</Link></div>
+                                    <div className='other-link'><Link className='single-link' to='/social'>Social</Link></div>
+                                    <div className='other-link'><Link className='single-link' to='/entertainment'>Entertainment</Link></div>
+                                    <div className='other-link'><Link className='single-link' to='/other'>Other</Link></div>
+                                </div>
                             </div>
                             <div className='home-browse-section'>
                                 <div className='home-location-container'>

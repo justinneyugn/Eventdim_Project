@@ -66,3 +66,33 @@ header {
     color: #3D64FF;
 }
 
+.category-links-container {
+    display: flex;
+    /* border: 1px solid red; */
+    margin-left: 299px;
+    margin-top: 50px;
+}
+.category-links {
+    /* border: 1px solid gray; */
+    display: flex;
+}
+
+.first-link {
+    padding-right: 16px;
+}
+
+.other-link {
+    padding: 0 16px;
+}
+
+.single-link {
+    color: #6F7287;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.single-link:hover {
+    color: black;
+    text-decoration: underline;
+}
