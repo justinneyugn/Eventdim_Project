@@ -1,9 +1,7 @@
 .event-item-container {
     display: flex;
     justify-content: flex-start;
-    margin-right: 300px;
-    width: 100;
-    
+    width: 0;
 }
 
 .event-item-container:hover {
@@ -16,6 +14,10 @@
     flex-direction: column;
     text-decoration: none;
     box-shadow: 2px 2px 5px lightgray, -2px -2px 5px lightgray;
+}
+
+.event-item:hover {
+    box-shadow: 2px 2px 5px gray, -2px -2px 5px gray;
 }
 .event-item-bottom-container {
     width: 357;

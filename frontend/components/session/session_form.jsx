@@ -91,7 +91,7 @@ class SessionForm extends React.Component {
         return (
             <div className="session-container">
                 <div className="session-inner">
-                    <h1 className="session-logo"><a href="http://localhost:3000/#/" className='website_name'>eventdim</a></h1>
+                    <h1 className="session-logo"><a href="https://eventdim.herokuapp.com/#/" className='website_name'>eventdim</a></h1>
                     <h1 className="session-type">{this.props.formType}</h1>
                     <div className="session-errors">{this.errors()}</div>
                     <form className="session-form" onSubmit={this.handleSubmit}>

@@ -71,6 +71,16 @@ class EventIndex extends React.Component {
                         </ul>
                     </div>
                 </section>
+                <section className='home-about-me'>
+                    <div className='about-me'>
+                        <a className='linked-in' href='https://www.linkedin.com/in/justin-nguyen-b851461b2/' target="_blank">
+                            <img src='https://eventdim-seeds.s3.us-west-1.amazonaws.com/linkedin_icon.png' width='30' height='30'></img>
+                        </a>
+                        <a className='github' href='https://github.com/justinneyugn' target="_blank">
+                            <img src='https://eventdim-seeds.s3.us-west-1.amazonaws.com/github_icon.png' width='30' height='30'></img>
+                        </a>
+                    </div>
+                </section>
             </div>
         )
     }

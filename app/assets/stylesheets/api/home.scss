@@ -67,10 +67,26 @@
     display: grid;
     grid-template-columns: repeat(3, 10fr);
     gap: 75px 0px;
-    // margin-left: 200px;
 }
 
-.home-events:nth-child(3n+1) {
-    margin-left: 500px;
+.home-events:nth-child(3n+2) {
+    margin-left: 300px;
 }
 
+.home-about-me {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #F4EDE4;
+    padding-bottom: 25px;
+    padding-top: 35px;
+}
+
+
+
+.linked-in {
+    margin-right: 30px;
+}
+
+.github {
+    margin-right: 30px;
+}
