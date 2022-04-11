@@ -9,5 +9,11 @@ The live site can be found
 ## Technologies Used
 
 * Ruby on Rails
-   * This serves as the backend framework to hold the data tables for the Users and Events
+   * This serves as the backend framework to hold the data tables for the Users and Events.
    * It handles the creating, updating, and destroying of user and event instances while rendering JSON objects to continue with the Redux cycle.
+
+* React/Redux
+   * This serves as the frontend library for the display of all the components.
+   * It contains the API Util functions that use Ajax requests to retrieve information from the backend.
+   * It contains the actions for a current user session as well as events and returns a POJO to the reducers.
+   * The reducers set the state with a session, entities, and errors object.
