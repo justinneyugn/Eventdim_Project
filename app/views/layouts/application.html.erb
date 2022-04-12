@@ -5,7 +5,13 @@
     <link rel="icon" type="image/x-icon" href="https://eventdim-seeds.s3.us-west-1.amazonaws.com/eventbrite.png">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta property="og:title" content="Eventdim">
+    <meta property="og:image" content="https://eventdim-seeds.s3.us-west-1.amazonaws.com/preview_pic.png">
+    <meta 
+      property="og:description" 
+      content="Eventdim is a clone of Eventbrite where logged in users can browse, create, edit, or delete events.
+      Eventdim uses Rails, PostgreSQL, JavaScript, React/Redux, HTML, CSS3, and AWS">
+    <meta property="og:url" content="https://eventdim.herokuapp.com/#/">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <% if current_user %>
