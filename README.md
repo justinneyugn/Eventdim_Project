@@ -18,3 +18,4 @@ The live site can be found
    * It contains the actions for a current user session as well as events and returns a POJO to the reducers.
    * The reducers set the state with a session, entities, and errors object.
 
+*
