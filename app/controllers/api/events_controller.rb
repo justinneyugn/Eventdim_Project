@@ -6,11 +6,12 @@ class Api::EventsController < ApplicationController
 
     def create
         @event = Event.new(event_params)
+        debugger
         @event.creator_id = current_user.id
         if @event.save
             render "api/events/show"
         else 
-            render json: @event.errors.full_messages, status: 422
+            render json: ["All areas must be filled out before submitting"], status: 401
         end
 
     end
@@ -43,7 +44,7 @@ class Api::EventsController < ApplicationController
         if @event.update(event_params)
             render "api/events/show"
         else
-            render json: @event.errors.full_messages, status: 422
+            render json: ["All areas must be filled out before submitting"], status: 401
         end
     end
 
@@ -59,6 +60,6 @@ class Api::EventsController < ApplicationController
     private
 
     def event_params
-        params.require(:event).permit(:title, :details, :creator_id, :location, :ticket_price, :date, :photo)
+        params.require(:event).permit(:id, :title, :details, :creator_id, :location, :ticket_price, :date, :photo)
     end
 end

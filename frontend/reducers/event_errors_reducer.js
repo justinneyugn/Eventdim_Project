@@ -2,7 +2,6 @@ import { RECEIVE_EVENT_ERRORS, RECEIVE_EVENT, REMOVE_EVENT_ERRORS } from "../act
 
 export default (state = [], action) => {
     Object.freeze(state);
-    let newState = Object.assign({}, state);
     switch (action.type) {
         case RECEIVE_EVENT_ERRORS:
             return action.errors;
