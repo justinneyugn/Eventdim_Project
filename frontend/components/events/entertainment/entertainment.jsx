@@ -40,7 +40,7 @@ class Entertainment extends React.Component {
                 />
                 <div className="home-container">
                     <section className='home-picture'>
-                        <img src="https://eventdim-seeds.s3.us-west-1.amazonaws.com/homepage.jpeg"></img>
+                        <img src="https://eventdim-seeds.s3.us-west-1.amazonaws.com/splash.png"></img>
                     </section>
                     <section className="home-bottom-half-container">
                         <div className='home-bottom-half'>
