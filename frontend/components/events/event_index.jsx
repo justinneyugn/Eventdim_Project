@@ -28,7 +28,7 @@ class EventIndex extends React.Component {
         return (
             <div className="home-container">
                 <section className='home-picture'>
-                    <img src="https://eventdim-seeds.s3.us-west-1.amazonaws.com/homepage.jpeg"></img>
+                    <img src="https://eventdim-seeds.s3.us-west-1.amazonaws.com/new_homepage.jpeg"></img>
                 </section>
                 <section className="home-bottom-half-container">
                     <div className='home-bottom-half'>
