@@ -12,10 +12,12 @@ import FoodContainer from "./events/food/food_container";
 import SocialContainer from "./events/social/social_container";
 import EntertainmentContainer from "./events/entertainment/entertainment_container";
 import OtherContainer from "./events/other/other_container";
+import Modal from "./modal/modal";
 
 
 const App = () => (
     <div>
+        <Modal />
         {/* these are only seen if you are logged in */}
         <ProtectedRoute exact path="/new" component={CreateEventFormContainer} />
         <ProtectedRoute exact path="/events/:eventId/edit" component={EditEventFormContainer} />
