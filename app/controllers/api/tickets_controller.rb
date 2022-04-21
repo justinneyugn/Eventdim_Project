@@ -6,7 +6,8 @@ class Api::TicketsController < ApplicationController
 
     def create
         @ticket = Ticket.new(ticket_params)
-        @ticket.purchaser_id = current_user.id
+        # @ticket.purchaser_id = current_user.id
+        # @ticket.event_id = params[:id]
         if @ticket.save
             render "api/tickets/show"
         else 

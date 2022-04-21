@@ -11,13 +11,13 @@ function Modal({ modal, closeModal }) {
     return (
         <div className='modal-background' onClick={closeModal}>
             <div className='modal-child' onClick={e => e.stopPropagation()}>
-                <TicketFormContainer />
+                <TicketFormContainer modal={modal}/>
             </div>
         </div>
     )
 }
 
-const mSTP = state => {
+const mSTP = (state) => {
     return {
         modal: state.ui.modal
     };

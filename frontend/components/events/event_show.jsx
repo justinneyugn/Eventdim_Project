@@ -29,6 +29,13 @@ class EventShow extends React.Component {
                 <Link className="btn" to="/signin">Sign In</Link>
             </div>
         );
+
+        const ticket = this.props.currentUser ? (
+            <button onClick={() => this.props.openModal(`${this.props.event.id}`)}>Tickets</button>
+        ) : (
+            <div></div>
+        )
+
         return (
             <div className='show-container'>
                 <header className="nav-bar">
@@ -53,6 +60,9 @@ class EventShow extends React.Component {
                                 </div>
                                 <div className='show-price'>
                                     <h4 className='price'>${this.props.event.ticket_price}</h4>
+                                </div>
+                                <div>
+                                    {ticket}
                                 </div>
                             </div>
                         </div>
