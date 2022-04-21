@@ -27,6 +27,7 @@ export default ({ currentUser, logout }) => {
             <ul className="nav_links">
                 <li>{user}</li>
                 <li><Link className="btn create" to='/new'>Create an event</Link></li>
+                <li><Link className="btn create" to='/tickets'>Tickets</Link></li>
                 <li>{display}</li>
             </ul>
         </nav>

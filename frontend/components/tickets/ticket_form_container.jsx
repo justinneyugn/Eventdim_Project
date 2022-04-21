@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createTicket } from '../../actions/ticket_actions';
 import TicketForm from './ticket_form';
-import { openModal, closeModal } from '../../actions/modal_actions';
+import { closeModal } from '../../actions/modal_actions';
 import { withRouter } from 'react-router-dom';
 
 const mSTP = (state) => {

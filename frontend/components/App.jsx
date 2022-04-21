@@ -13,6 +13,7 @@ import SocialContainer from "./events/social/social_container";
 import EntertainmentContainer from "./events/entertainment/entertainment_container";
 import OtherContainer from "./events/other/other_container";
 import Modal from "./modal/modal";
+import TicketShowContainer from "./tickets/ticket_show_container";
 
 
 const App = () => (
@@ -21,6 +22,7 @@ const App = () => (
         {/* these are only seen if you are logged in */}
         <ProtectedRoute exact path="/new" component={CreateEventFormContainer} />
         <ProtectedRoute exact path="/events/:eventId/edit" component={EditEventFormContainer} />
+        <ProtectedRoute exact path="/tickets" component={TicketShowContainer} />
 
         <Route exact path="/events/:eventId" component={EventShowContainer} />
 

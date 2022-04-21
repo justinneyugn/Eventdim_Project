@@ -8,6 +8,7 @@ class TicketForm extends React.Component {
         this.update = this.update.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.event = this.props.event[parseInt(this.props.modal)];
+        this.renderErrors = this.renderErrors.bind(this);
     }
 
     update(field) {
@@ -26,15 +27,23 @@ class TicketForm extends React.Component {
     }
 
     renderErrors() {
-        return(
-            <ul>
-                {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
-        );
+        if (this.props.errors) {
+            return(
+                <ul>
+                    {this.props.errors.map((error, i) => {
+                        return (
+                            <li key={`error-${i}`}>
+                                {error}
+                            </li>
+                        )
+                    })}
+                </ul>
+            );
+        } else {
+            return (
+                <div></div>
+            )
+        }
     }
 
     render() {
