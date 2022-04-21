@@ -8,7 +8,9 @@ Rails.application.routes.draw do
       resources :events, only: [:index]
     end
     resource :session, only: [:create, :destroy]
-    resources :events
+    resources :events do 
+      resources :tickets
+    end
   end
 
   

@@ -21,5 +21,10 @@ class Event < ApplicationRecord
         foreign_key: :creator_id,
         class_name: :User
 
+    has_many :tickets,
+        primary_key: :id,
+        foreign_key: :event_id,
+        class_name: :Ticket
+
     has_one_attached :photo
 end
