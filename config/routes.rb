@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       resources :tickets, only: [:create, :update, :destroy]
     end
     resources :tickets
+    resources :bookmarks
   end
 
   
