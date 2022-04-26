@@ -28,15 +28,32 @@ class BookmarkShow extends React.Component {
                 let eventId = bookmark.event_id;
                 let event = this.props.events[eventId];
                 return (
-                    <div key={`bookmark-${i}`}>
-                        <Link className="event-item" to={`/events/${eventId}`}>{event.title}</Link>
-                        <h3>{event.date}</h3>
-                        <h3>{event.location}</h3>
-                        <h3>Starts at ${event.ticket_price}</h3>
-                        <img src={`${event.photoUrl}`} width="370" height="178.98"></img>
-                        <button className="ticket-btn" onClick={() => this.props.deleteBookmark(bookmark.id)}>Unlike</button>
-                    </div>
-            )})
+                    <li key={`bookmark-${i}`} className="event-item-container">
+                        <Link className="event-item" to={`/events/${eventId}`}>
+                            <div className='event-picture'>
+                                <img src={`${event.photoUrl}`} width="370" height="178.98"></img>
+                            </div>
+                            <div className="event-item-bottom-container bookmark-bottom">
+                                <div className="event-title">
+                                    <h3>{event.title}</h3>
+                                </div>
+                                <div className="event-date">
+                                    <p>{event.date}</p>
+                                </div>
+                                <div className="event-location">
+                                    <p>{event.location}</p>
+                                </div>
+                                <div className="event-ticket-price">
+                                    <p>Starts at ${event.ticket_price}</p>
+                                </div>
+                                <div className="event-edit-delete">
+                                    <button className="ticket-btn" onClick={() => this.props.deleteBookmark(bookmark.id)}>Unlike</button>
+                                </div>
+                            </div>
+                        </Link>
+                    </li>
+                )
+            })
         }
     }
 
@@ -44,10 +61,10 @@ class BookmarkShow extends React.Component {
         if (!this.props.bookmarks) return null;
         return (
             <div>
-                <NavBar currentUser={this.props.currentUser} logout={this.props.logout}/>
+                <NavBar currentUser={this.props.currentUser} logout={this.props.logout} />
                 <div className='ticket-show'>
                     <div id="ticket-header">Likes</div>
-                    <div className="reports-grid">{this.showUserBookmarks()}</div>
+                    <ul className="reports-grid">{this.showUserBookmarks()}</ul>
                 </div>
             </div>
         )

@@ -27,7 +27,6 @@ class EventIndexItem extends React.Component {
     }
 
     render(){
-        // if (!this.props.event) return null;
 
         const editDelete = () => {
             if (this.props.currentUser && this.props.currentUser.id === this.props.event.creator_id) {
@@ -57,11 +56,11 @@ class EventIndexItem extends React.Component {
         }
         return (
             <li className="event-item-container">
-                <Link className="event-item" to={`/events/${this.props.event.id}`}>
-                    <div className="event-picture">
+                <Link className="event-item bookmark-item" to={`/events/${this.props.event.id}`}>
+                    <div className="event-picture bookmark-picture">
                         <img src={`${this.props.event.photoUrl}`} width="370" height="178.98"></img>
                     </div>
-                    <div className="event-item-bottom-container">
+                    <div className="bookmark-bottom event-item-bottom-container ">
                         <div className="event-item-bottom">
                             <div className="event-title">
                                 <h3>{this.props.event.title}</h3>

@@ -69,7 +69,7 @@ class EventIndex extends React.Component {
                             </div>
                         </div>
                         <br />
-                        <ul className='home-events'>
+                        <ul className='reports-grid'>
                             {events}
                         </ul>
                     </div>
