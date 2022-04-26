@@ -1,3 +1,45 @@
 // Place all the styles related to the api/tickets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.ticket-form-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket-form-top {
+    display: flex;
+}
+
+.ticket-form-top-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2%;
+    padding-left: 15%;
+    text-align: center;
+    padding-right: 10%;
+    padding-bottom: 12%;
+}
+
+#ticket-form-title {
+    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+    color: #39364F;
+    font-size: 20px;
+}
+
+#ticket-form-date {
+    margin-top: 5%;
+    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+    font-size: 14px;
+    color: #6F7287;
+}
+
+.ticket-weight {
+    font-weight: 400;
+}
+
+.close-x {
+    
+}

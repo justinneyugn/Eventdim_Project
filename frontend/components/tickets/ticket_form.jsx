@@ -52,10 +52,10 @@ class TicketForm extends React.Component {
                 <div className='ticket-form-top'>
                     <div className='ticket-form-top-center'>
                         <div id='ticket-form-title'>
-                            <h2>{this.event.title}</h2>
+                            <h2 className='ticket-weight'>{this.event.title}</h2>
                         </div>
                         <div id='ticket-form-date'>
-                            <h3>{this.event.date}</h3>
+                            <h3 className='ticket-weight'>{this.event.date}</h3>
                         </div>
                     </div>
                     <div onClick={this.props.closeModal} className="close-x">X</div>
