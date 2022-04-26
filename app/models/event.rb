@@ -26,5 +26,10 @@ class Event < ApplicationRecord
         foreign_key: :event_id,
         class_name: :Ticket
 
+    has_many :bookmarks,
+        primary_key: :id,
+        foreign_key: :event_id,
+        class_name: :Bookmark
+
     has_one_attached :photo
 end

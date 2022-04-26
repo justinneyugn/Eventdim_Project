@@ -28,6 +28,11 @@ class User < ApplicationRecord
         foreign_key: :purchaser_id,
         class_name: :Ticket
 
+    has_many :bookmarks,
+        primary_key: :id,
+        foreign_key: :bookmarker_id,
+        class_name: :Bookmark
+
     def self.find_by_credentials(email, password)
         @user = User.find_by(email: email)
         return nil if @user.nil?
