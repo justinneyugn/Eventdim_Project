@@ -101,3 +101,27 @@
     margin-top: 25px;
     color: #39364F;
 }
+
+.show-ticket {
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.ticket-button {
+    flex: 1;
+    color: #FFFFFF;
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 14px 28px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    transition: all .4s cubic-bezier(.4,0,.3,1);
+    background-color: #0d8547;
+}
+
+.ticket-button:hover {
+    opacity: 0.8;
+}

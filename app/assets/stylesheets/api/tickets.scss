@@ -20,7 +20,8 @@
     padding-left: 15%;
     text-align: center;
     padding-right: 10%;
-    padding-bottom: 12%;
+    padding-bottom: 5%;
+    border-bottom-color: #39364F;
 }
 
 #ticket-form-title {
@@ -41,5 +42,57 @@
 }
 
 .close-x {
-    
+    height: 40px;
+    padding: 8px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.close-x:hover {
+    transition: all .4s cubic-bezier(.4, 0, .3, 1);
+    font-weight: 600;
+}
+
+.ticket-form-errors {
+    text-align: center;
+    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+    font-size: 14px;
+    color: red;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.ticket-form-input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ticket-form-bottom-price {
+    margin-top: 4%;
+    font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+    color: #39364F;
+    margin-bottom: 4%;
+}
+
+.ticket-input-box {
+    border: gray;
+    flex: 1;
+}
+.ticket-form-input {
+    background-color: #E8F0FE;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    text-align: center;
+    align-self: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.ticket-form-button {
+    margin-top: 5%;
+    align-self: right;
+    border-radius: 0%;
 }

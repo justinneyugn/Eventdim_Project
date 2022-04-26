@@ -31,7 +31,7 @@ class EventShow extends React.Component {
         );
 
         const ticket = this.props.currentUser ? (
-            <button onClick={() => this.props.openModal(`${this.props.event.id}`)}>Tickets</button>
+            <button className='ticket-button' onClick={() => this.props.openModal(`${this.props.event.id}`)}>Tickets</button>
         ) : (
             <div></div>
         )
@@ -61,7 +61,7 @@ class EventShow extends React.Component {
                                 <div className='show-price'>
                                     <h4 className='price'>${this.props.event.ticket_price}</h4>
                                 </div>
-                                <div>
+                                <div className='show-ticket'>
                                     {ticket}
                                 </div>
                             </div>
