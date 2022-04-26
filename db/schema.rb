@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_21_014950) do
+ActiveRecord::Schema.define(version: 2022_04_26_052256) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(version: 2022_04_21_014950) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "bookmarks", force: :cascade do |t|
+    t.integer "bookmarker_id", null: false
+    t.integer "event_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bookmarker_id"], name: "index_bookmarks_on_bookmarker_id"
+    t.index ["event_id"], name: "index_bookmarks_on_event_id"
   end
 
   create_table "events", force: :cascade do |t|
