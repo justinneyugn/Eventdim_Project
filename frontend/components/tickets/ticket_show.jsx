@@ -25,8 +25,8 @@ class TicketShow extends React.Component {
         } else {
             return userTickets.map((ticket, i) => (
                 <div key={i} className="ticket-show">
-                    <div id='ticket-amount'>{ticket.amount}</div>
                     <div id='ticket-event-title'>{this.events[ticket.event_id].title}</div>
+                    <div id='ticket-amount'>Amount of tickets: {ticket.amount}</div>
                     <button className="ticket-btn" onClick={() => this.props.deleteTicket(ticket.id)}>Delete</button>
                 </div>
             ))

@@ -1,0 +1,55 @@
+.ticket-btn {
+    background-color: transparent;
+    border: none;
+    margin-top: 7%;
+    font-size: 2vh;
+    cursor: pointer;
+    color: red;
+}
+
+.ticket-btn:hover {
+    opacity: 0.8;
+}
+
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 4%;
+    grid-column-gap: 2%;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 15vh;
+}
+
+#ticket-header {
+    text-align: center;
+    font-size: 35px;
+    margin: 2.5%;
+    font-weight: bolder;
+}
+
+.ticket-show {
+    width: 100%;
+    padding: 5%;
+    margin-right: 2%;
+    box-shadow: 2px 2px 5px gray, -2px -2px 5px gray;
+    height: 100%;
+}
+
+#no-tickets {
+    text-align: center;
+    margin-top: 3%;
+    font-size: 20px;
+}
+
+#ticket-amount {
+    font-size: 120%;
+    margin-top: 3%;
+}
+
+#ticket-event-title {
+    font-size: 150%;
+    font-weight: 700;
+    margin-top: 3%;
+}
