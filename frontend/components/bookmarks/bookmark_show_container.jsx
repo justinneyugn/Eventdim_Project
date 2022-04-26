@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { requestBookmarks } from '../../actions/bookmark_actions';
+import { requestBookmarks, deleteBookmark } from '../../actions/bookmark_actions';
 import BookmarkShow from './bookmark_show';
 import { logout } from '../../actions/session_actions';
 
@@ -14,7 +14,8 @@ const mSTP = state => {
 const mDTP = dispatch => {
     return ({
         requestBookmarks: () => dispatch(requestBookmarks()),
-        logout: () => dispatch(logout())
+        logout: () => dispatch(logout()),
+        deleteBookmark: bookmarkId => dispatch(deleteBookmark(bookmarkId))
     });
 };
 

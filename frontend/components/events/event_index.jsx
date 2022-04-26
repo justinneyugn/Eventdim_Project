@@ -20,6 +20,9 @@ class EventIndex extends React.Component {
                     deleteEvent={this.props.deleteEvent}
                     currentUser={this.props.currentUser}
                     requestEvent={this.props.requestEvent}
+                    bookmarks={this.props.bookmarks}
+                    requestBookmarks={this.props.requestBookmarks}
+                    createBookmark={this.props.createBookmark}
                     history={this.props.history}
                     key={`event-${idx}`}
                 />

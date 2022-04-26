@@ -5,6 +5,7 @@ class EventIndexItem extends React.Component {
     constructor(props){
         super(props);
         this.afterDelete = this.afterDelete.bind(this);
+        this.handleLike = this.handleLike.bind(this);
     }
 
     componentDidMount(){
@@ -15,6 +16,14 @@ class EventIndexItem extends React.Component {
         e.preventDefault();
         this.props.deleteEvent(this.props.event.id).then( response => {
         })
+    }
+
+    handleLike(e){
+        e.preventDefault();
+        this.props.createBookmark({
+            bookmarker_id: this.props.currentUser.id,
+            event_id: this.props.event.id
+        });
     }
 
     render(){
@@ -32,6 +41,19 @@ class EventIndexItem extends React.Component {
                     </div>
                 )
             }
+        }
+
+        const like = () => {
+            this.props.bookmarks.map( (bookmark, idx) => {
+                if ((bookmark.event_id === this.props.event.id) && (bookmark.bookmarker_id === this.props.currentUser.id)) {
+                    return (
+                        <div>Liked</div>
+                    )
+                }
+            })
+            return (
+                <button onClick={this.handleLike}>Like</button>
+            )
         }
         return (
             <li className="event-item-container">
@@ -55,6 +77,7 @@ class EventIndexItem extends React.Component {
                             </div>
                             <div className="event-edit-delete"> 
                                 {editDelete()}
+                                {like()}
                             </div>
                         </div>
                     </div>
