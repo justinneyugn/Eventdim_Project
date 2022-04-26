@@ -27,6 +27,7 @@ class TicketShow extends React.Component {
                 <div key={i} className="ticket-show">
                     <div id='ticket-amount'>{ticket.amount}</div>
                     <div id='ticket-event-title'>{this.events[ticket.event_id].title}</div>
+                    <button className="ticket-btn" onClick={() => this.props.deleteTicket(ticket.id)}>Delete</button>
                 </div>
             ))
         }

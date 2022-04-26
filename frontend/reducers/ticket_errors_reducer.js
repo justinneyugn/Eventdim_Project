@@ -7,8 +7,6 @@ export default (state = [], action) => {
             return action.errors;
         case REMOVE_TICKET_ERRORS: 
             return [];
-        case RECEIVE_TICKET:
-            return Object.assign({}, state, { [action.ticket.id]: action.ticket })
         default:
             return state;
     }
