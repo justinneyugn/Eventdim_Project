@@ -52,6 +52,13 @@ handleSubmit(e){
 
 ### Purchasing a Ticket
 
+
+<img src="https://github.com/justinneyugn/Eventdim_Project/blob/main/app/assets/images/ticket_modal.png" style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;">
+  
+  
 Within the show page of each event, logged-in users are presented with an option of purchasing a ticket. Through a modal, users can input the amount of tickets they would like and click on the X if they do not want to purchase any. If they try to checkout without inputting a number, they are prompted with an error message. Within the navbar on the homepage, users can click on the 'Tickets' option to get a grid-displayed list of all the tickets they purchased and can delete them if they do not wish to own them anymore. Ideally, there would be a return policy that will be later implemented. 
 
 An issue that occurred with the modal was that the event's ID did not persist when opening the modal. This was needed when creating tickets since the ticket would store the event's ID in order to create that association. In order to save that ID when opening the modal and creating a ticket, I sent it in as a string argument when the 'Tickets' button was clicked (since the modal in the state would hold a string if it was open, null if it was closed), then converted it into an integer when saving the newly created ticket.
@@ -62,6 +69,35 @@ An issue that occurred with the modal was that the event's ID did not persist wh
 
 ```javascript
 this.event = this.props.event[parseInt(this.props.modal)];
+```
+
+
+### Liking an Event
+
+Logged-in users can like events within the homepage only if they have not already liked the event previously. These events are stored within a separate 'Likes' page that can be navigated to within the navbar of the homepage. This page has a grid-display of all liked events and users can unlike an event to remove it from the page. If these events are clicked, users are redirected to the specific event's show page.
+
+In order to hide the 'like' button if the user already liked the event previously, I looped through the 'likes' already saved within the state and created a conditional to see if the user already liked the event (it initially was called 'bookmarks' which is reflected within the code).
+
+```javascript
+const like = () => {
+    let exists = false;
+    if (this.props.currentUser) {
+        this.props.bookmarks.map( (bookmark, idx) => {
+            if (bookmark.event_id === this.props.event.id && bookmark.bookmarker_id === this.props.currentUser.id) {
+                exists = true;
+            }
+        })
+        if (!exists) {
+            return (
+                <div>
+                    <button className="event-delete" onClick={this.handleLike}>Like</button>
+                </div>
+            )
+        } else {
+            return null;
+        }
+    }
+}
 ```
 
 ## Technologies Used
