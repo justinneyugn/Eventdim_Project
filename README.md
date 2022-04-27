@@ -12,6 +12,33 @@ Eventdim is an event management site that allows users to browse and create loca
 
 ## Key Features
 
+### Creating an Event
+
+Events are stored locally as well as in the Redux state so that they persist upon refresh. Logged-in users can create an event that will appear on the event grid on the homepage. They also are given the ability to edit or delete their own events within the grid, but cannot do the same to events that they did not create. Based on the details they include upon creation, each event renders a show page when clicked, containing all the information the user inputted. All areas of the event form page must be filled out or else the user is prompted with an error message. As the event form page includes image submission, a FormData object must be created and sent when creating each event. Depending on if the user is creating or editing an event, they will be sent to either the homepage or event show page to see their change.
+
+```javascript 
+handleSubmit(e){
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append('event[id]', this.state.id);
+    formData.append('event[title]', this.state.title);
+    formData.append('event[details]', this.state.details);
+    formData.append('event[creator_id]', this.state.creator_id);
+    formData.append('event[location]', this.state.location);
+    formData.append('event[ticket_price]', this.state.ticket_price);
+    formData.append('event[date]', this.state.date);
+    formData.append('event[photo]', this.state.photoUrl);
+
+    this.props.submitEvent(formData).then( response => {
+        if (this.props.formType === 'Create an event') {
+            this.props.history.push(`/`);
+        } 
+        else {
+            this.props.history.push(`/events/${this.state.id}`)
+        };
+    })
+}
+```
 
 ## Technologies Used
 
