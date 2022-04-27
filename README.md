@@ -1,10 +1,17 @@
 # Eventdim
 
-Eventdim is an event management site that allows users to browse and create local events. Based on the live Eventbrite site, Eventdim focuses on events based in Sacramento while provides a simple interface centered around a grid layout on the homepage. Paralleling a virtual poster board, Eventdim seeks to serve as an easily navigable app while promoting community and involvement within the Sacramento region.
 
+[Live Link](https://eventdim.herokuapp.com/#/)
 
-The live site can be found 
-[here](https://eventdim.herokuapp.com/#/).
+Eventdim is an event management site that allows users to browse and create local events. Based on the live [Eventbrite](https://www.eventbrite.com/) site, Eventdim focuses on events based in Sacramento while provides a simple interface centered around a grid layout on the homepage. Paralleling a virtual poster board, Eventdim seeks to serve as an easily navigable app while promoting community and involvement within the Sacramento region.
+
+<img src="https://github.com/justinneyugn/Eventdim_Project/blob/main/app/assets/images/preview_pic.png" style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;">
+
+## Key Features
+
 
 ## Technologies Used
 
