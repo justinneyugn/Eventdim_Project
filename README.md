@@ -10,6 +10,12 @@ Eventdim is an event management site that allows users to browse and create loca
   margin-right: auto;
   width: 75%;">
 
+## Table of Contents  
+* [Key Features](#key-features)  
+* [Technologies Used](#technologies-used)  
+* [Planned Features](#planned-features)
+
+
 ## Key Features
 
 ### Creating an Event
@@ -59,7 +65,7 @@ handleSubmit(e){
   width: 75%;">
   
   
-Within the show page of each event, logged-in users are presented with an option of purchasing a ticket. Through a modal, users can input the amount of tickets they would like and click on the X if they do not want to purchase any. If they try to checkout without inputting a number, they are prompted with an error message. Within the navbar on the homepage, users can click on the 'Tickets' option to get a grid-displayed list of all the tickets they purchased and can delete them if they do not wish to own them anymore. Ideally, there would be a return policy that will be later implemented. 
+Within the show page of each event, logged-in users are presented with an option of purchasing a ticket. Through a modal, users can input the amount of tickets they would like and click on the X if they do not want to purchase any. If they try to checkout without inputting a number, they are prompted with an error message. Within the navbar on the homepage, users can click on the 'Tickets' option to get a grid-displayed list of all the tickets they purchased and can delete them if they do not wish to own them anymore. Ideally, there would be a refund policy that will be later implemented. 
 
 An issue that occurred with the modal was that the event's ID did not persist when opening the modal. This was needed when creating tickets since the ticket would store the event's ID in order to create that association. In order to save that ID when opening the modal and creating a ticket, I sent it in as a string argument when the 'Tickets' button was clicked (since the modal in the state would hold a string if it was open, null if it was closed), then converted it into an integer when saving the newly created ticket.
 
@@ -73,6 +79,14 @@ this.event = this.props.event[parseInt(this.props.modal)];
 
 
 ### Liking an Event
+
+
+<img src="https://github.com/justinneyugn/Eventdim_Project/blob/main/app/assets/images/likes_show.png" style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;">
+
+
 
 Logged-in users can like events within the homepage only if they have not already liked the event previously. These events are stored within a separate 'Likes' page that can be navigated to within the navbar of the homepage. This page has a grid-display of all liked events and users can unlike an event to remove it from the page. If these events are clicked, users are redirected to the specific event's show page.
 
@@ -102,12 +116,20 @@ const like = () => {
 
 ## Technologies Used
 
-* Ruby on Rails
-   * This serves as the backend framework to hold the data tables for the Users and Events.
-   * It handles the creating, updating, and destroying of user and event instances while rendering JSON objects to continue with the Redux cycle.
+* Front End: React.js, Redux
+   * Supports front-end handling of events, categories, likes, and tickets
+   * Maintains user session so logged-in users stay logged in upon refresh
+   * Contains API Util functions, actions, and reducers for all components 
+* Back End: Ruby on Rails, Jbuilder, Active Storage, and PostgreSQL database
+   * This serves as the backend framework to hold the data tables for the Users, Events, Likes, and Tickets
+   * It handles the creating, updating, and destroying of instances while formulating JSON objects to continue with the Redux cycle
+* Other: Amazon AWS S3, JavaScript
+   *  AWS S3 handles image hosting to store images for each event as well as image submission when users create an event
+   *  Webpack was used for bundling and Babel.js for transpiling
+* Hosting: Eventdim is hosted on Heroku
 
-* React/Redux
-   * This serves as the frontend library for the display of all the components.
-   * It contains the API Util functions that use Ajax requests to retrieve information from the backend.
-   * It contains the actions for a current user session as well as events and returns a POJO to the reducers.
-   * The reducers set the state with a session, entities, and errors object
+
+## Planned Features
+
+* ATM feature upon checkout when purchasing tickets
+* Refund policy when cancelling tickets
