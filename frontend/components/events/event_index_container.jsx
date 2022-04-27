@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import EventIndex from './event_index';
 import { requestEvents, deleteEvent, requestEvent } from '../../actions/event_actions';
-import { requestBookmarks, createBookmark } from '../../actions/bookmark_actions';
+import { requestBookmarks, requestBookmark, createBookmark } from '../../actions/bookmark_actions';
 
 const mSTP = state => {
     return ({
@@ -17,7 +17,8 @@ const mDTP = dispatch => {
         deleteEvent: eventId => dispatch(deleteEvent(eventId)),
         requestEvent: eventId => dispatch(requestEvent(eventId)),
         requestBookmarks: () => dispatch(requestBookmarks()),
-        createBookmark: bookmark => dispatch(createBookmark(bookmark))
+        createBookmark: bookmark => dispatch(createBookmark(bookmark)),
+        requestBookmark: bookmarkId => dispatch(requestBookmark(bookmarkId))
     });
 };
 

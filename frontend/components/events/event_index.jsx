@@ -8,11 +8,11 @@ class EventIndex extends React.Component {
     }
 
     componentDidMount(){
-        // window.scrollTo(0,0)
         this.props.requestEvents();
     }
 
     render(){
+        debugger
         let events = this.props.events.map( (event, idx) => {
             return (
                 <EventIndexItem
@@ -23,6 +23,7 @@ class EventIndex extends React.Component {
                     bookmarks={this.props.bookmarks}
                     requestBookmarks={this.props.requestBookmarks}
                     createBookmark={this.props.createBookmark}
+                    requestBookmark={this.props.requestBookmark}
                     history={this.props.history}
                     key={`event-${idx}`}
                 />

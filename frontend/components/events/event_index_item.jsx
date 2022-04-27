@@ -43,16 +43,16 @@ class EventIndexItem extends React.Component {
         }
 
         const like = () => {
-            this.props.bookmarks.map( (bookmark, idx) => {
-                if ((bookmark.event_id === this.props.event.id) && (bookmark.bookmarker_id === this.props.currentUser.id)) {
-                    return (
-                        <div>Liked</div>
-                    )
-                }
-            })
-            return (
-                <button onClick={this.handleLike}>Like</button>
-            )
+            if (this.props.currentUser) {
+                this.props.bookmarks.map( (bookmark, idx) => {
+                    if (bookmark.event_id === this.props.event.id && bookmark.bookmarker_id === this.props.currentUser.id) {
+                        return (<div></div>)
+                    }
+                })
+                return (
+                    <button className="event-delete" onClick={this.handleLike}>Like</button>
+                )
+            }
         }
         return (
             <li className="event-item-container">

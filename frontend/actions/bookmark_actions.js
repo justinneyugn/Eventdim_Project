@@ -25,6 +25,12 @@ export const requestBookmarks = () => dispatch => {
     );
 };
 
+export const requestBookmark = (bookmarkId) => dispatch => {
+    return (
+        BookmarkAPIUtil.fetchBookmark(bookmarkId).then(bookmark => (dispatch(receiveBookmark(bookmark))))
+    );
+};
+
 export const createBookmark = (bookmark) => dispatch => {
     return (
         BookmarkAPIUtil.createBookmark(bookmark).then(bookmark => (
