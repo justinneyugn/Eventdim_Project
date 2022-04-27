@@ -127,6 +127,8 @@ class EventForm extends React.Component {
                                 <p>This is the first image attendees will see at the top of your listing. Use a high quality image: 2160x1080px (2:1 ratio).</p>
                             </div>
                             <div className='custom-image'>
+                                <div className='required'>IF EDITING, IMAGE MUST BE UPLOADED AGAIN</div>
+                                <br />
                                 <label className="custom-file-upload">
                                     <input 
                                         type="file" 

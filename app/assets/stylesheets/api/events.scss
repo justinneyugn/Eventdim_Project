@@ -134,6 +134,11 @@ input[type="file"] {
     background-size: contain;
 }
 
+.required {
+    color: red;
+    font-weight: bold;
+}
+
 .img {
     display: flex;
     justify-content: center;
