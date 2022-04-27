@@ -9,10 +9,10 @@ class EventIndex extends React.Component {
 
     componentDidMount(){
         this.props.requestEvents();
+        this.props.requestBookmarks();
     }
 
     render(){
-        debugger
         let events = this.props.events.map( (event, idx) => {
             return (
                 <EventIndexItem
