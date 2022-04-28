@@ -10,6 +10,8 @@ class Entertainment extends React.Component {
 
     componentDidMount(){
         this.props.requestEvents();
+        this.props.requestBookmarks();
+
     }
 
     render(){
@@ -27,6 +29,10 @@ class Entertainment extends React.Component {
                     deleteEvent={this.props.deleteEvent}
                     currentUser={this.props.currentUser}
                     requestEvent={this.props.requestEvent}
+                    bookmarks={this.props.bookmarks}
+                    requestBookmarks={this.props.requestBookmarks}
+                    createBookmark={this.props.createBookmark}
+                    requestBookmark={this.props.requestBookmark}
                     history={this.props.history}
                     key={`event-${idx}`}
                 />

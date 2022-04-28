@@ -9,8 +9,8 @@ class Other extends React.Component {
     }
 
     componentDidMount(){
-        // window.scrollTo(0,0)
         this.props.requestEvents();
+        this.props.requestBookmarks();
     }
 
     render(){
@@ -28,6 +28,10 @@ class Other extends React.Component {
                     deleteEvent={this.props.deleteEvent}
                     currentUser={this.props.currentUser}
                     requestEvent={this.props.requestEvent}
+                    bookmarks={this.props.bookmarks}
+                    requestBookmarks={this.props.requestBookmarks}
+                    createBookmark={this.props.createBookmark}
+                    requestBookmark={this.props.requestBookmark}
                     history={this.props.history}
                     key={`event-${idx}`}
                 />
