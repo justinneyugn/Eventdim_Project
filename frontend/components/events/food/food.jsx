@@ -83,7 +83,7 @@ class Food extends React.Component {
                                 </div>
                             </div>
                             <br />
-                            <ul className='home-events'>
+                            <ul className='reports-grid'>
                                 {foodEvents}
                             </ul>
                         </div>

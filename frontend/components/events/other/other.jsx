@@ -83,7 +83,7 @@ class Other extends React.Component {
                                 </div>
                             </div>
                             <br />
-                            <ul className='home-events'>
+                            <ul className='reports-grid'>
                                 {otherEvents}
                             </ul>
                         </div>

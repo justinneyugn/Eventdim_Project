@@ -83,7 +83,7 @@ class Social extends React.Component {
                                 </div>
                             </div>
                             <br />
-                            <ul className='home-events'>
+                            <ul className='reports-grid'>
                                 {socialEvents}
                             </ul>
                         </div>

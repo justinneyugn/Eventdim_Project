@@ -84,7 +84,7 @@ class Entertainment extends React.Component {
                                 </div>
                             </div>
                             <br />
-                            <ul className='home-events'>
+                            <ul className='reports-grid'>
                                 {entertainmentEvents}
                             </ul>
                         </div>
