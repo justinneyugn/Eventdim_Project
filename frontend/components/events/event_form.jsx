@@ -113,7 +113,7 @@ class EventForm extends React.Component {
                                 <label className='form-label'>Event Date</label>
                                 <input
                                     className='form-input'
-                                    type="text"
+                                    type="date"
                                     onChange={this.update('date')}
                                     value={this.state.date}
                                 />

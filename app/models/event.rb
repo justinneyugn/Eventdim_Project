@@ -10,11 +10,11 @@
 #  creator_id   :integer          not null
 #  location     :string           not null
 #  ticket_price :float            not null
-#  date         :string           not null
 #  category     :string
+#  date         :date
 #
 class Event < ApplicationRecord
-    validates :title, :details, :location, :ticket_price, :date, presence:true
+    validates :title, :details, :location, :ticket_price, presence:true
 
     belongs_to :creator,
         primary_key: :id,

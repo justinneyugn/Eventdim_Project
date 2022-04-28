@@ -42,7 +42,7 @@ event1 = Event.create(title: "Mix + Mingle - Sacramento's Largest Free Business 
     creator_id: user1.id,
     location: "Mix Downtown",
     ticket_price: 0.00,
-    date: "Thu, March 31, 2022",
+    date: Date.new(2022, 3, 31),
     category: "social")
 
     file1 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/mix_and_mingle.jpeg')
@@ -74,7 +74,7 @@ event3 = Event.create(title: "Sacramento Grilled Cheese Festival 2022",
     creator_id: user3.id,
     location: "Southside Park",
     ticket_price: 8.00,
-    date: "Sun, May 15, 2022",
+    date: Date.new(2022, 5, 15),
     category: "food")
 
     file3 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/grilled_cheese.jpeg')
@@ -92,7 +92,7 @@ event4 = Event.create(title: "Self Care Sundays | Season 3 Opener at the Old Sug
     creator_id: user2.id,
     location: "Old Sugar Mill",
     ticket_price: 35.00,
-    date: "Sun, April 3, 2022",
+    date: Date.new(2022, 4, 3), 
     category: "food")
 
     file4 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/self_care.jpeg')
@@ -416,7 +416,7 @@ event5 = Event.create(title: "Margarita Fest",
     creator_id: user2.id,
     location: "Cesar Chavez Plaza",
     ticket_price: 60.00,
-    date: "Starting Sat, April 30",
+    date: "Sat, April 30, 2022",
     category: "food")
 
     file5 = open('https://eventdim-seeds.s3.us-west-1.amazonaws.com/margarita.jpeg')
